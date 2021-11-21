@@ -36,5 +36,5 @@ setTimeout(()=>{
 setTimeout(()=>{
   changeNumber();
   count--;
-  // redirect();
+  redirect();
 }, 6000);
