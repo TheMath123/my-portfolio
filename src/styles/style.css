@@ -13,16 +13,19 @@ body {
 h1 {
   font-size: 2rem;
   font-weight: 700;
+  color: #111111;
 }
 
 h2 {
   font-size: 1.5rem;
   font-weight: 600;
+  color: #202020;
 }
 
 h3 {
   font-size: 1.25rem;
   font-weight: 500;
+  color: #2c2c2c;
 }
 
 main {
