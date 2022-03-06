@@ -1,0 +1,22 @@
+.container {
+  display: grid;
+  grid-template-rows: 1fr 50px;
+
+  main {
+    display: flex;
+    flex: 1;
+  }
+
+  .bar{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: var(--color1);
+
+    .icons {
+      display: flex;
+      justify-content: space-around;
+      padding-left: 1.5rem;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  // background-image: url('/wallpaper.jpg') no-repeat;
+}
+
+:root {
+  //Colors
+  --color1: #262626;
+  --color2: #35363A;
+  
+  //Gradients
+  --gradient: linear-gradient(180deg, #E8E8E8 0%, #CFCFCF 100%);
+  --gradient2: linear-gradient(168.51deg, #353635 8%, #313236 92.26%);
+  
+  
+  //Box Shadows Templates
+  --shadowColor: #C4C4C4;
+  --shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.25);
+
+}
