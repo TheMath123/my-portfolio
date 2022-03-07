@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Clock } from "../clock";
 import styles from "./taskbar.module.scss";
 
 export function Taskbar() {
@@ -26,8 +27,15 @@ export function Taskbar() {
         </button>
       </div>
       <div className={styles.info}>
-        <span>21:51</span>
-        <span>03/03/2022</span>
+        <select name="Language" id="">
+          <option value="pt-br" selected>
+            PT-BR
+          </option>
+          <option value="en-us">EN-US</option>
+        </select>
+        <div className={styles.clock}>
+          <Clock />
+        </div>
       </div>
     </div>
   );
