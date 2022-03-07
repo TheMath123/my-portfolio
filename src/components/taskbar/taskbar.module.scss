@@ -10,20 +10,53 @@
       flex-direction: row;
       align-items: center;
       justify-content: center;
+      
+      gap: 1px;
+      
+      button {
+        background: none;
+        font-size: 0;
+        border: none;
+        
+        padding: 0 .7rem;
+        height: 100%;
 
-      gap: 1.5rem;
-      padding: 0 1.5rem;
+        cursor: pointer;
+
+        &:hover {
+          background: hsla(0, 0%, 47%, 0.219);  
+        }
+        
+      }
     }
 
     .info {
+      display: flex;
+      flex-direction: row;
+      
+      select {
+        font-size: .85rem;
+        font-weight: 500;
+        color: white;
+        
+        background: none;
+        border: transparent;
+
+        transition: all .2s;
+
+        option {
+          background: var(--color1);
+          padding: .5rem .7rem;
+        }
+      }
+    }
+
+    .clock {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       padding: 0 1.5rem;
       
-      span {
-        font-size: .85rem;
-      }
     }
   }
