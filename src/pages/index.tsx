@@ -1,10 +1,13 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Taskbar } from '../components/taskbar'
+import styles from './home.module.scss'
 
 export default function Home() {
-  return (<>
-    <h1>Hello NextJS!</h1>
-    <Taskbar/>
-  </>)
+  return (
+    <div className={styles.workspace}>
+      <main> Hi Portfolio!</main>
+      <Taskbar/>
+    </div>
+  )
 }
