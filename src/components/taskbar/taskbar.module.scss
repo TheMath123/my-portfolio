@@ -10,9 +10,24 @@
       flex-direction: row;
       align-items: center;
       justify-content: center;
+      
+      gap: 1px;
+      
+      button {
+        background: none;
+        font-size: 0;
+        border: none;
+        
+        padding: 0 .7rem;
+        height: 100%;
 
-      gap: 1.5rem;
-      padding: 0 1.5rem;
+        cursor: pointer;
+
+        &:hover {
+          background: hsla(0, 0%, 47%, 0.219);  
+        }
+        
+      }
     }
 
     .info {
