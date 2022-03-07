@@ -1,0 +1,29 @@
+  .taskbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    background: var(--color1);
+
+    .icons {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      gap: 1.5rem;
+      padding: 0 1.5rem;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 1.5rem;
+      
+      span {
+        font-size: .85rem;
+      }
+    }
+  }
