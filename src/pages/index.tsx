@@ -1,13 +1,18 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Taskbar } from '../components/taskbar'
-import styles from './home.module.scss'
+import { Taskbar } from "../components/taskbar";
+import { Icon } from "../components/icon";
+import styles from "./home.module.scss";
 
 export default function Home() {
+  const teste = function () {
+    alert(teste);
+  };
+
   return (
     <div className={styles.workspace}>
-      <main> Hi Portfolio!</main>
-      <Taskbar/>
+      <main>
+        <Icon name="Teste" img="" func={teste} />
+      </main>
+      <Taskbar />
     </div>
-  )
+  );
 }
