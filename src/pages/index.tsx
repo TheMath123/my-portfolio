@@ -10,9 +10,9 @@ export default function Home() {
   return (
     <div className={styles.workspace}>
       <main>
-        <Icon name="Sobre o Matheus" img="/icons/character.png" func={teste} />
-        <Icon name="Projetos" img="/icons/files.png" func={teste} />
-        <Icon name="Fale comigo" img="/icons/call.png" func={teste} />
+        <Icon name="Sobre o Matheus" img="/icons/character.svg" func={teste} />
+        <Icon name="Projetos" img="/icons/files.svg" func={teste} />
+        <Icon name="Fale comigo" img="/icons/call.svg" func={teste} />
       </main>
       <Taskbar />
     </div>
