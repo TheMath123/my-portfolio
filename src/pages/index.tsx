@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Taskbar } from "../components/taskbar";
 import { Icon } from "../components/icon";
 import styles from "./home.module.scss";
@@ -15,6 +16,12 @@ export default function Home() {
         <Icon name="Fale comigo" img="/icons/call.svg" func={teste} />
       </main>
       <Taskbar />
+      {/* <Image
+        src={"/wallpaper.jpg"}
+        alt="Deveria ter um papel de parede! =("
+        width="100%"
+        height="100%"
+      /> */}
     </div>
   );
 }
