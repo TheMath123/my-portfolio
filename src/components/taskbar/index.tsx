@@ -6,21 +6,32 @@ export function Taskbar() {
   return (
     <div className={styles.taskbar}>
       <div className={styles.icons}>
-        <button>
-          <Image src="/door.svg" alt="Door" width={27} height={27} />
-        </button>
-        <button onClick={() => window.open("https://hitext.vercel.app/")}>
+        <button title="Doors">
           <Image
-            src="/hitext.svg"
-            alt="Aplicação do HiText"
+            src="/door.svg"
+            alt="Icone de uma porta na cor branca."
             width={27}
             height={27}
           />
         </button>
-        <button onClick={() => window.open("https://startmessage.vercel.app/")}>
+        <button
+          onClick={() => window.open("https://hitext.vercel.app/")}
+          title="Aplicação do HiText"
+        >
+          <Image
+            src="/hitext.svg"
+            alt="Logo da Aplicação do HiText, um circulo branco com letra H e T dentro na cor preta."
+            width={27}
+            height={27}
+          />
+        </button>
+        <button
+          onClick={() => window.open("https://startmessage.vercel.app/")}
+          title="Aplicação do StartMessage"
+        >
           <Image
             src="/startmessage.ico"
-            alt="Aplicação do StartMessage"
+            alt="Logo da Aplicação do StartMessage, um bolãozinho de conversa verde com telefone na cor branco dentro."
             width={30}
             height={30}
           />
