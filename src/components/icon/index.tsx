@@ -10,7 +10,7 @@ type iconProps = {
 
 export function Icon({ name, alt, img, func }: iconProps) {
   return (
-    <div className={styles.container} onClick={() => func}>
+    <div data-message={name} className={styles.container} onClick={() => func}>
       <Image src={img} alt={alt} width={47} height={47} />
       <span>{name}</span>
       <div className={styles.background}></div>
