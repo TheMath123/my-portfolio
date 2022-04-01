@@ -11,9 +11,24 @@ export default function Home() {
   return (
     <div className={styles.workspace}>
       <main>
-        <Icon name="Sobre o Matheus" img="/icons/character.svg" func={teste} />
-        <Icon name="Projetos" img="/icons/files.svg" func={teste} />
-        <Icon name="Fale comigo" img="/icons/call.svg" func={teste} />
+        <Icon
+          name="Sobre o Matheus"
+          alt="Personagem de cor de pele (um rosinha claro), de olhos preto, e com sorizinho."
+          img="/icons/character.svg"
+          func={teste}
+        />
+        <Icon
+          name="Projetos"
+          alt="Caderno marron, com um etiqueta branca na capa, e com marcadores de pagina coloridos."
+          img="/icons/files.svg"
+          func={teste}
+        />
+        <Icon
+          name="Fale comigo"
+          alt="Um balão de conversar amarelo com rostinho dentro, saindo de um icone de telefone na cor vermelha."
+          img="/icons/call.svg"
+          func={teste}
+        />
       </main>
       <Taskbar />
       {/* <Image
