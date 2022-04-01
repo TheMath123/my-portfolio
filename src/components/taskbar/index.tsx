@@ -19,10 +19,10 @@ export function Taskbar() {
         </button>
         <button onClick={() => window.open("https://startmessage.vercel.app/")}>
           <Image
-            src="/startmessage.png"
+            src="/startmessage.ico"
             alt="Aplicação do StartMessage"
-            width={27}
-            height={27}
+            width={30}
+            height={30}
           />
         </button>
       </div>
