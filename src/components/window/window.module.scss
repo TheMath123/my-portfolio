@@ -1,0 +1,40 @@
+.container {
+  display: grid;
+  grid-template-rows: 32px 1fr;
+  position: absolute;
+  
+  z-index: 100;
+
+  top: 20%;
+  left:20%;
+
+  width: 80%;
+  height: 60%;
+
+  background: linear-gradient(168.51deg, #353635 8%, #313236 92.26%);
+  border-radius: 15px;
+
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 15px 15px 0px 0px;
+    background: var(--color1)
+  }
+}
+
+.btnsWindow {
+  display: flex;
+  justify-self: flex-end;
+  
+  button {
+    height: 33px;
+    background: none;
+    border: none;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 0;
+  }
+}

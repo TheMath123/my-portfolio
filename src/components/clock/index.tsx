@@ -10,7 +10,7 @@ export function Clock() {
       setCurrentDate(new Date());
     }, 1000);
     return () => clearInterval(secDate);
-  }, []);
+  });
 
   useEffect(() => {
     let secTime = setInterval(() => {

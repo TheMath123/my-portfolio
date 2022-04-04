@@ -38,10 +38,8 @@ export function Taskbar() {
         </button>
       </div>
       <div className={styles.info}>
-        <select name="Language" id="">
-          <option value="pt-br" selected>
-            PT-BR
-          </option>
+        <select name="Language" id="1">
+          <option defaultValue="pt-br">PT-BR</option>
           <option value="en-us">EN-US</option>
         </select>
         <div className={styles.clock}>

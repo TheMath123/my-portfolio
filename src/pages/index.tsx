@@ -1,6 +1,6 @@
-import Image from "next/image";
 import { Taskbar } from "../components/taskbar";
 import { Icon } from "../components/icon";
+import { Window } from "../components/window";
 import styles from "./home.module.scss";
 
 export default function Home() {
@@ -29,6 +29,7 @@ export default function Home() {
           img="/icons/call.svg"
           func={teste}
         />
+        <Window name="Titulo da janela">Conteudo futuro...</Window>
       </main>
       <Taskbar />
       {/* <Image
