@@ -29,7 +29,23 @@ export default function Home() {
           img="/icons/call.svg"
           func={teste}
         />
-        <Window name="Titulo da janela">Conteudo futuro...</Window>
+        <Window name="Titulo da janela">
+          <h1>Titulo do conteudo</h1>
+          <a href="">Conteudo</a>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a
+            metus sit amet tellus condimentum sodales. Nullam malesuada suscipit
+            augue et venenatis. Ut feugiat pellentesque enim varius sodales.
+            Phasellus blandit gravida orci ut luctus. Donec a nunc eget nulla
+            vulputate accumsan. Aliquam erat volutpat. Pellentesque gravida ante
+            eget varius posuere. Maecenas quis gravida leo. Nam pulvinar, purus
+            eu feugiat pulvinar, eros mauris dictum enim, volutpat pulvinar nisi
+            tortor eu nibh. Aliquam erat volutpat. Pellentesque gravida ante
+            eget varius posuere. Maecenas quis gravida leo. Nam pulvinar, purus
+            eu feugiat pulvinar, eros mauris dictum enim, volutpat pulvinar nisi
+            tortor eu nibh. adsadsa
+          </p>
+        </Window>
       </main>
       <Taskbar />
       {/* <Image
