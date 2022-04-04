@@ -44,10 +44,6 @@ a {
   width: 10px;
 }
 
-::-webkit-scrollbar:hover {
-  width: 12px;
-}
-
 ::-webkit-scrollbar-thumb { //Barra de rolagem
   background: var(--color1);
   border-radius: 15px;
