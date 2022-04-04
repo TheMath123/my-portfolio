@@ -38,3 +38,25 @@ a {
     filter: brightness(.7);
   }
 }
+
+::-webkit-scrollbar { // Barra de rolagem
+  background: none;
+  width: 10px;
+}
+
+::-webkit-scrollbar:hover {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb { //Barra de rolagem
+  background: var(--color1);
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-button { //Botões de navegação nos cantos inferior da barra.
+  background: none;
+}
+
+::-webkit-scrollbar-corner { //Botão no canto inferior direito.
+  background: none;
+}
