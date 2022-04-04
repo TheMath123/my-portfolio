@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import styles from "./window.module.scss";
 
@@ -8,12 +8,18 @@ type windowProps = {
 };
 
 export function Window({ name, children }: windowProps) {
+  const [max, setMax] = useState(false);
+
   return (
-    <div data-message={name} title={name} className={styles.container}>
+    <div
+      data-message={name}
+      title={name}
+      className={`${styles.container} ${max && styles.max}`}
+    >
       <header>
-        <div className={styles.title}>{name}</div>
+        <span className={styles.title}>{name}</span>
         <div className={styles.btnsWindow}>
-          <button className={styles.minimize}>
+          <button className={styles.minimize} onClick={() => setMax(false)}>
             <Image
               src="/window/minimize.svg"
               alt="Minimizar"
@@ -22,7 +28,7 @@ export function Window({ name, children }: windowProps) {
             />
           </button>
 
-          <button className={styles.maximize}>
+          <button className={styles.maximize} onClick={() => setMax(true)}>
             <Image
               src="/window/maximize.svg"
               alt="Maximizar"
@@ -31,7 +37,7 @@ export function Window({ name, children }: windowProps) {
             />
           </button>
 
-          <button className={styles.close}>
+          <button className={styles.close} onClick={() => setOpen(false)}>
             <Image
               src="/window/close.svg"
               alt="Fechar"

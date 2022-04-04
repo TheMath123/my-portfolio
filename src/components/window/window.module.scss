@@ -5,14 +5,16 @@
   
   z-index: 100;
 
-  top: 20%;
-  left:20%;
+  top: 10%;
+  left: 10%;
 
   width: 80%;
   height: 60%;
 
   background: linear-gradient(168.51deg, #353635 8%, #313236 92.26%);
   border-radius: 15px;
+
+  transition: all .5s;
 
   header {
     display: flex;
@@ -25,16 +27,40 @@
   }
 }
 
+.max {
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: calc(100vh - 50px);
+
+  border-radius: 0;
+
+  header {
+    border-radius: 0;
+  }
+}
+
 .btnsWindow {
   display: flex;
-  justify-self: flex-end;
+  flex-direction: row;
+
+  align-items: center;
   
   button {
-    height: 33px;
     background: none;
     border: none;
+
     border-radius: 50%;
     padding: 5px;
     font-size: 0;
+
+    cursor: pointer;
+
+    transition: filter .2s;
+
+    &:hover {
+      filter: brightness(.9);
+    }
   }
 }
