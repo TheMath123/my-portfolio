@@ -23,5 +23,7 @@ export interface IIconProps {
 export interface IWindowProps {
   //Component Window
   name: string;
+  controlWindow: boolean;
+  closeWindow: (index: number) => void;
   children?: React.ReactNode;
 }

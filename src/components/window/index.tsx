@@ -1,9 +1,11 @@
 import { useState } from "react";
 import Image from "next/image";
+import { UseWindow } from "../../hooks/useWindow";
 import { IWindowProps } from "../../@types";
 import styles from "./window.module.scss";
 
 export function Window({ name, children }: IWindowProps) {
+  const { window, closeWindow } = UseWindow();
   const [max, setMax] = useState(false);
 
   return (
@@ -46,4 +48,7 @@ export function Window({ name, children }: IWindowProps) {
       <main>{children}</main>
     </div>
   );
+}
+function useWindow(): {} {
+  throw new Error("Function not implemented.");
 }

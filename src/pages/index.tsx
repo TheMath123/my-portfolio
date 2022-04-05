@@ -1,9 +1,12 @@
 import { Taskbar } from "../components/taskbar";
 import { Icon } from "../components/icon";
 import { Window } from "../components/window";
+import { useWindow } from "../hooks/useWindow";
 import styles from "./home.module.scss";
 
 export default function Home() {
+  const { window, closeWindow } = useWindow();
+
   const teste = function () {
     alert(teste);
   };
@@ -29,28 +32,14 @@ export default function Home() {
           img="/icons/call.svg"
           func={teste}
         />
-        <Window name="Titulo da janela">
+        <Window
+          name="Titulo da janela"
+          controlWindow={window[0]}
+          closeWindow={closeWindow(0)}
+        >
           <h1>Título do conteudo</h1>
           <a href="https://google.com">Link</a>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a
-            metus sit amet tellus condimentum sodales. Nullam malesuada suscipit
-            augue et venenatis. Ut feugiat pellentesque enim varius sodales.
-            Phasellus blandit gravida orci ut luctus. Donec a nunc eget nulla
-            vulputate accumsan. Aliquam erat volutpat. Pellentesque gravida ante
-            eget varius posuere. Maecenas quis gravida leo. Nam pulvinar, purus
-            eu feugiat pulvinar, eros mauris dictum enim, volutpat pulvinar nisi
-            tortor eu nibh. Aliquam erat volutpat. Pellentesque gravida ante
-            eget varius posuere. Maecenas quis gravida leo. Nam pulvinar, purus
-            eu feugiat pulvinar, eros mauris dictum enim, volutpat pulvinar nisi
-            tortor eu nibh. Aliquam erat volutpat. Pellentesque gravida ante
-            eget varius posuere. Maecenas quis gravida leo. Nam pulvinar, purus
-            eu feugiat pulvinar, eros mauris dictum enim, volutpat pulvinar nisi
-            tortor eu nibh. Aliquam erat volutpat. Pellentesque gravida ante
-            eget varius posuere. Maecenas quis gravida leo. Nam pulvinar, purus
-            eu feugiat pulvinar, eros mauris dictum enim, volutpat pulvinar nisi
-            tortor eu nibh. adsadsa
-          </p>
+          <p>Conteudo, em construção...</p>
         </Window>
       </main>
       <Taskbar />
