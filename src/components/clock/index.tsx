@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import styles from "./clock.module.scss";
 
-export function Clock() {
-  const [currentDate, setCurrentDate] = useState(new Date());
-  const [currentTime, setCurrentTime] = useState(new Date());
+export function Clock(): JSX.Element {
+  const [currentDate, setCurrentDate] = useState<Date>(new Date());
+  const [currentTime, setCurrentTime] = useState<Date>(new Date());
 
   useEffect(() => {
     let secDate = setInterval((): void => {
@@ -13,7 +13,7 @@ export function Clock() {
   });
 
   useEffect(() => {
-    let secTime = setInterval((): void => {
+    let secTime = setInterval(() => {
       setCurrentTime(new Date());
     }, 1000);
     return () => clearInterval(secTime);

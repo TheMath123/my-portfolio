@@ -1,13 +1,9 @@
-import { ReactNode, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
+import { IWindowProps } from "../../@types";
 import styles from "./window.module.scss";
 
-type windowProps = {
-  name: string;
-  children?: ReactNode;
-};
-
-export function Window({ name, children }: windowProps) {
+export function Window({ name, children }: IWindowProps) {
   const [max, setMax] = useState(false);
 
   return (
