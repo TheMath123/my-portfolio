@@ -30,7 +30,7 @@ export function Taskbar() {
           title="Aplicação do StartMessage"
         >
           <Image
-            src="/startmessage.ico"
+            src="/startmessage.png"
             alt="Logo da Aplicação do StartMessage, um bolãozinho de conversa verde com telefone na cor branco dentro."
             width={30}
             height={30}
