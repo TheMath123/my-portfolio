@@ -8,7 +8,7 @@ import { useEffect } from "react";
 export default function Home() {
   const { openWindows, openTheWindow } = useWindow();
 
-  const teste = alert(teste);
+  const teste = () => alert('teste');
 
   useEffect(() => {
     console.log(openWindows)
