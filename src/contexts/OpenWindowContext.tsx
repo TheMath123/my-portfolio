@@ -10,6 +10,8 @@ export function OpenWindowProvider({ children }: IChildrenProps) {
     let arrayWindows = openWindows;
     arrayWindows[index] = open;
     setOpenWindows(arrayWindows);
+
+    console.log(`Array atualizado: ${openWindows}`)
   }
 
   return (

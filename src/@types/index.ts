@@ -17,6 +17,7 @@ export interface IIconProps {
   alt: string;
   img: string;
   func?: () => void;
+  windowIndexToOpen?: number;
 }
 
 export interface IWindowProps {

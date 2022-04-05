@@ -1,8 +1,10 @@
 import Image from "next/image";
 import { IIconProps } from "../../@types";
+import { useWindow } from "../../hooks/useControlWindow";
 import styles from "./icon.module.scss";
 
-export function Icon({ name, alt, img, func }: IIconProps) {
+export function Icon({ name, alt, img, func, windowIndexToOpen }: IIconProps) {
+  const { openTheWindow } = useWindow()
   return (
     <div
       data-message={name}
@@ -10,8 +12,9 @@ export function Icon({ name, alt, img, func }: IIconProps) {
       className={styles.container}
       onClick={(e) => {
         e.preventDefault();
-
-        () => func;
+        if(windowIndexToOpen !== null){
+          openTheWindow(windowIndexToOpen, true)
+        }
       }}
     >
       <Image src={img} alt={alt} width={47} height={47} />

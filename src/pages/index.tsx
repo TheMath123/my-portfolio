@@ -11,7 +11,7 @@ export default function Home() {
   const teste = () => alert('teste');
 
   useEffect(() => {
-    console.log(openWindows)
+    console.log(`Pages: ${openWindows}`)
   }, [openWindows])
   
 
@@ -22,7 +22,7 @@ export default function Home() {
           name="Sobre o Matheus"
           alt="Personagem de cor de pele (um rosinha claro), de olhos preto, e com sorrisinho."
           img="/icons/character.svg"
-          func={() => openTheWindow(0, true)}
+          windowIndexToOpen={0}
         />
         <Icon
           name="Projetos"
@@ -34,7 +34,7 @@ export default function Home() {
           name="Fale comigo"
           alt="Um balão de conversar amarelo com rostinho dentro, saindo de um ícone de telefone na cor vermelha."
           img="/icons/call.svg"
-          func={teste}
+          
         />
 
         { openWindows[0] && (
