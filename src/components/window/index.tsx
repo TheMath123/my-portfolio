@@ -28,10 +28,7 @@ export function Window({ name, children }: windowProps) {
             />
           </button>
 
-          <button
-            className={styles.maximize}
-            onClick={() => console.log("open")}
-          >
+          <button className={styles.maximize} onClick={() => setMax(true)}>
             <Image
               src="/window/maximize.svg"
               alt="Maximizar"
@@ -40,7 +37,7 @@ export function Window({ name, children }: windowProps) {
             />
           </button>
 
-          <button className={styles.close} onClick={() => setOpen(false)}>
+          <button className={styles.close} onClick={() => console.log("open")}>
             <Image
               src="/window/close.svg"
               alt="Fechar"
