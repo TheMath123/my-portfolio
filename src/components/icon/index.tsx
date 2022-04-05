@@ -8,7 +8,7 @@ export function Icon({ name, alt, img, func }: IIconProps) {
       data-message={name}
       title={name}
       className={styles.container}
-      onClick={() => func}
+      onClick={func}
     >
       <Image src={img} alt={alt} width={47} height={47} />
       <span>{name}</span>

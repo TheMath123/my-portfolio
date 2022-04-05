@@ -7,9 +7,8 @@ export interface IChildrenProps {
 
 export interface IOpenWindowContextProps {
   //Context Props
-  window: boolean[];
-  openWindow: (index: number) => void;
-  closeWindow: (index: number) => void;
+  openWindows: boolean[];
+  openTheWindow: (index: number, open: boolean) => void;
 }
 
 export interface IIconProps {
@@ -23,7 +22,6 @@ export interface IIconProps {
 export interface IWindowProps {
   //Component Window
   name: string;
-  controlWindow: boolean;
-  closeWindow: (index: number) => void;
+  windowIndex: number;
   children?: React.ReactNode;
 }

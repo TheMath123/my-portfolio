@@ -1,11 +1,12 @@
 import { useState } from "react";
 import Image from "next/image";
-import { UseWindow } from "../../hooks/useWindow";
 import { IWindowProps } from "../../@types";
+import { useWindow } from '../../hooks/useControlWindow';
 import styles from "./window.module.scss";
 
-export function Window({ name, children }: IWindowProps) {
-  const { window, closeWindow } = UseWindow();
+export function Window({ name, windowIndex, children }: IWindowProps) {
+  const { openTheWindow } = useWindow();
+
   const [max, setMax] = useState(false);
 
   return (
@@ -35,7 +36,7 @@ export function Window({ name, children }: IWindowProps) {
             />
           </button>
 
-          <button className={styles.close} onClick={() => console.log("open")}>
+          <button className={styles.close} onClick={() =>openTheWindow(windowIndex, false)}>
             <Image
               src="/window/close.svg"
               alt="Fechar"
@@ -48,7 +49,4 @@ export function Window({ name, children }: IWindowProps) {
       <main>{children}</main>
     </div>
   );
-}
-function useWindow(): {} {
-  throw new Error("Function not implemented.");
 }

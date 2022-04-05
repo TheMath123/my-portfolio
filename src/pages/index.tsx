@@ -1,24 +1,28 @@
 import { Taskbar } from "../components/taskbar";
 import { Icon } from "../components/icon";
 import { Window } from "../components/window";
-import { useWindow } from "../hooks/useWindow";
+import { useWindow } from "../hooks/useControlWindow";
 import styles from "./home.module.scss";
+import { useEffect } from "react";
 
 export default function Home() {
-  const { window, closeWindow } = useWindow();
+  const { openWindows, openTheWindow } = useWindow();
 
-  const teste = function () {
-    alert(teste);
-  };
+  const teste = alert(teste);
+
+  useEffect(() => {
+    console.log(openWindows)
+  }, [openWindows])
+  
 
   return (
     <div className={styles.workspace}>
       <main>
         <Icon
           name="Sobre o Matheus"
-          alt="Personagem de cor de pele (um rosinha claro), de olhos preto, e com sorizinho."
+          alt="Personagem de cor de pele (um rosinha claro), de olhos preto, e com sorrisinho."
           img="/icons/character.svg"
-          func={teste}
+          func={() => openTheWindow(0, true)}
         />
         <Icon
           name="Projetos"
@@ -28,27 +32,25 @@ export default function Home() {
         />
         <Icon
           name="Fale comigo"
-          alt="Um balão de conversar amarelo com rostinho dentro, saindo de um icone de telefone na cor vermelha."
+          alt="Um balão de conversar amarelo com rostinho dentro, saindo de um ícone de telefone na cor vermelha."
           img="/icons/call.svg"
           func={teste}
         />
-        <Window
-          name="Titulo da janela"
-          controlWindow={window[0]}
-          closeWindow={closeWindow(0)}
-        >
-          <h1>Título do conteudo</h1>
-          <a href="https://google.com">Link</a>
-          <p>Conteudo, em construção...</p>
-        </Window>
+
+        { openWindows[0] && (
+          <Window
+            name="Titulo da janela"
+            windowIndex={0}
+          >
+            <h1>Título do conteúdo</h1>
+            <a href="https://google.com">Link</a>
+            <p>em construção...</p>
+          </Window>
+        )}
+
       </main>
+
       <Taskbar />
-      {/* <Image
-        src={"/wallpaper.jpg"}
-        alt="Deveria ter um papel de parede! =("
-        width="100%"
-        height="100%"
-      /> */}
     </div>
   );
 }
