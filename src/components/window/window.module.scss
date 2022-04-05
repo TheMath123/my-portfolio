@@ -1,3 +1,7 @@
+.disable {
+  display: none !important;
+}
+
 .container {
   display: grid;
   grid-template-rows: 32px 1fr;
@@ -23,7 +27,13 @@
     align-items: center;
 
     border-radius: 15px 15px 0px 0px;
-    background: var(--color1)
+    background: var(--color1);
+    
+    span {
+      font-weight: 500;
+      font-size: 1rem;
+      color: #E8E8E8;
+    }
   }
 
   main {
