@@ -30,8 +30,8 @@ export default function Home() {
           func={teste}
         />
         <Window name="Titulo da janela">
-          <h1>Titulo do conteudo</h1>
-          <a href="#">Conteudo</a>
+          <h1>Título do conteudo</h1>
+          <a href="https://google.com">Link</a>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a
             metus sit amet tellus condimentum sodales. Nullam malesuada suscipit
@@ -43,8 +43,7 @@ export default function Home() {
             tortor eu nibh. Aliquam erat volutpat. Pellentesque gravida ante
             eget varius posuere. Maecenas quis gravida leo. Nam pulvinar, purus
             eu feugiat pulvinar, eros mauris dictum enim, volutpat pulvinar nisi
-            tortor eu nibh.
-            Aliquam erat volutpat. Pellentesque gravida ante
+            tortor eu nibh. Aliquam erat volutpat. Pellentesque gravida ante
             eget varius posuere. Maecenas quis gravida leo. Nam pulvinar, purus
             eu feugiat pulvinar, eros mauris dictum enim, volutpat pulvinar nisi
             tortor eu nibh. Aliquam erat volutpat. Pellentesque gravida ante

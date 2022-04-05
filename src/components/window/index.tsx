@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 import Image from "next/image";
 import styles from "./window.module.scss";
 
@@ -28,7 +28,10 @@ export function Window({ name, children }: windowProps) {
             />
           </button>
 
-          <button className={styles.maximize} onClick={() => setMax(true)}>
+          <button
+            className={styles.maximize}
+            onClick={() => console.log("open")}
+          >
             <Image
               src="/window/maximize.svg"
               alt="Maximizar"

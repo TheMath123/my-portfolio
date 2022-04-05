@@ -6,14 +6,14 @@ export function Clock() {
   const [currentTime, setCurrentTime] = useState(new Date());
 
   useEffect(() => {
-    let secDate = setInterval(() => {
+    let secDate = setInterval((): void => {
       setCurrentDate(new Date());
     }, 1000);
     return () => clearInterval(secDate);
   });
 
   useEffect(() => {
-    let secTime = setInterval(() => {
+    let secTime = setInterval((): void => {
       setCurrentTime(new Date());
     }, 1000);
     return () => clearInterval(secTime);
