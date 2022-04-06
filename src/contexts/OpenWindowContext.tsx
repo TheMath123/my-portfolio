@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { IChildrenProps, IOpenWindowContextProps } from "../@types";
 
 export const OpenWindowContext = createContext({} as IOpenWindowContextProps);
@@ -6,10 +6,12 @@ export const OpenWindowContext = createContext({} as IOpenWindowContextProps);
 export function OpenWindowProvider({ children }: IChildrenProps) {
   const [openWindows, setOpenWindows] = useState<boolean[]>([false, false, false]);
 
-  function openTheWindow(index, open) {
-    let arrayWindows = openWindows;
-    arrayWindows[index] = open;
-    setOpenWindows(arrayWindows);
+  function openTheWindow(indexWindow: number, open: boolean) {
+    setOpenWindows(
+      openWindows.map(
+        (value, index) => index === indexWindow ? open : value
+      )
+    );
   }
 
   return (

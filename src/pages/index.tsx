@@ -3,17 +3,9 @@ import { Icon } from "../components/icon";
 import { Window } from "../components/window";
 import { useWindow } from "../hooks/useControlWindow";
 import styles from "./home.module.scss";
-import { useEffect } from "react";
 
 export default function Home() {
   const { openWindows, openTheWindow } = useWindow();
-
-  const teste = () => alert('teste');
-
-  useEffect(() => {
-    console.log(`Pages: ${openWindows}`)
-  }, [openWindows])
-  
 
   return (
     <div className={styles.workspace}>
@@ -22,20 +14,20 @@ export default function Home() {
           name="Sobre o Matheus"
           alt="Personagem de cor de pele (um rosinha claro), de olhos preto, e com sorrisinho."
           img="/icons/character.svg"
-          windowIndexToOpen={() => openTheWindow(0, true)}
+          commandToOpenWindow={() => openTheWindow(0, true)}
         />
-        {/* <Icon
+        <Icon
           name="Projetos"
           alt="Caderno marron, com um etiqueta branca na capa, e com marcadores de pagina coloridos."
           img="/icons/files.svg"
-          windowIndexToOpen={1}
+          commandToOpenWindow={() => openTheWindow(1, true)}
         />
         <Icon
           name="Fale comigo"
           alt="Um balão de conversar amarelo com rostinho dentro, saindo de um ícone de telefone na cor vermelha."
           img="/icons/call.svg"
-          windowIndexToOpen={2}
-        /> */}
+          commandToOpenWindow={() => openTheWindow(2, true)}
+        />
 
         { openWindows[0] && (
           <Window
@@ -45,6 +37,24 @@ export default function Home() {
             <h1>Título do conteúdo</h1>
             <a href="https://google.com">Link</a>
             <p>em construção...</p>
+          </Window>
+        )}
+
+        { openWindows[1] && (
+          <Window
+            name="Titulo da janela"
+            windowIndex={1}
+          >
+            <h1>Janela 2</h1>
+          </Window>
+        )}
+
+        { openWindows[2] && (
+          <Window
+            name="Titulo da janela"
+            windowIndex={2}
+          >
+            <h1>Janela 3</h1>
           </Window>
         )}
 

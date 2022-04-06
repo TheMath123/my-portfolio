@@ -16,8 +16,7 @@ export interface IIconProps {
   name: string;
   alt: string;
   img: string;
-  func?: () => void;
-  windowIndexToOpen?: () => void;
+  commandToOpenWindow: () => void;
 }
 
 export interface IWindowProps {
