@@ -1,18 +1,13 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import { IWindowProps } from "../../@types";
 import { useWindow } from '../../hooks/useControlWindow';
 import styles from "./window.module.scss";
 
 export function Window({ name, windowIndex, children }: IWindowProps) {
-  const { openWindows, openTheWindow } = useWindow();
+  const { openTheWindow } = useWindow();
 
   const [max, setMax] = useState(false);
-
-  useEffect(() => {
-    console.log(`Dentro da windows: ${openWindows}`)  
-  }, [openWindows])
-  
 
   return (
     <div

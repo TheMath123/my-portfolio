@@ -22,20 +22,20 @@ export default function Home() {
           name="Sobre o Matheus"
           alt="Personagem de cor de pele (um rosinha claro), de olhos preto, e com sorrisinho."
           img="/icons/character.svg"
-          windowIndexToOpen={0}
+          windowIndexToOpen={() => openTheWindow(0, true)}
         />
-        <Icon
+        {/* <Icon
           name="Projetos"
           alt="Caderno marron, com um etiqueta branca na capa, e com marcadores de pagina coloridos."
           img="/icons/files.svg"
-          func={teste}
+          windowIndexToOpen={1}
         />
         <Icon
           name="Fale comigo"
           alt="Um balão de conversar amarelo com rostinho dentro, saindo de um ícone de telefone na cor vermelha."
           img="/icons/call.svg"
-          
-        />
+          windowIndexToOpen={2}
+        /> */}
 
         { openWindows[0] && (
           <Window

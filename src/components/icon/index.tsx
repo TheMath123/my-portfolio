@@ -5,6 +5,8 @@ import styles from "./icon.module.scss";
 
 export function Icon({ name, alt, img, func, windowIndexToOpen }: IIconProps) {
   const { openTheWindow } = useWindow()
+
+  windowIndexToOpen()
   return (
     <div
       data-message={name}
@@ -13,7 +15,7 @@ export function Icon({ name, alt, img, func, windowIndexToOpen }: IIconProps) {
       onClick={(e) => {
         e.preventDefault();
         if(windowIndexToOpen !== null){
-          openTheWindow(windowIndexToOpen, true)
+          // openTheWindow(windowIndexToOpen, true)
         }
       }}
     >

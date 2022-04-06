@@ -4,14 +4,12 @@ import { IChildrenProps, IOpenWindowContextProps } from "../@types";
 export const OpenWindowContext = createContext({} as IOpenWindowContextProps);
 
 export function OpenWindowProvider({ children }: IChildrenProps) {
-  const [openWindows, setOpenWindows] = useState([false, false, false]);
+  const [openWindows, setOpenWindows] = useState<boolean[]>([false, false, false]);
 
   function openTheWindow(index, open) {
     let arrayWindows = openWindows;
     arrayWindows[index] = open;
     setOpenWindows(arrayWindows);
-
-    console.log(`Array atualizado: ${openWindows}`)
   }
 
   return (
