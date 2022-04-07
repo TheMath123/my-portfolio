@@ -30,7 +30,7 @@ export function Taskbar() {
           title="Aplicação do StartMessage"
         >
           <Image
-            src="/startmessage.ico"
+            src="/startmessage.png"
             alt="Logo da Aplicação do StartMessage, um bolãozinho de conversa verde com telefone na cor branco dentro."
             width={30}
             height={30}
@@ -38,10 +38,8 @@ export function Taskbar() {
         </button>
       </div>
       <div className={styles.info}>
-        <select name="Language" id="">
-          <option value="pt-br" selected>
-            PT-BR
-          </option>
+        <select name="Language" id="1">
+          <option defaultValue="pt-br">PT-BR</option>
           <option value="en-us">EN-US</option>
         </select>
         <div className={styles.clock}>

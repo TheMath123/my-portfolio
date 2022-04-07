@@ -11,6 +11,17 @@
 
   cursor: pointer;
 
+  transition: all .2s;
+
+  &:hover {
+    .background {
+      display: flex;
+    }
+  }
+
+  &:active {
+    transform: scale(.8);
+  }
 
   span {
     text-align: center;
@@ -29,12 +40,4 @@
     border-radius: 15px;
     z-index: -999;
   }
-  
-  &:hover {
-    .background {
-      display: flex;
-    }
-  }
-
-
 }
