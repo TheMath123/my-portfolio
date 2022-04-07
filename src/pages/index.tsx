@@ -1,13 +1,16 @@
+import Image from 'next/image';
 import { Taskbar } from "../components/taskbar";
 import { Icon } from "../components/icon";
 import { Window } from "../components/window";
 import { useWindow } from "../hooks/useControlWindow";
 import { ProjectScreen } from "../windows/ProjectScreen";
 import styles from "./home.module.scss";
+import { useEffect } from 'react';
+
 
 export default function Home() {
   const { openWindows, openTheWindow } = useWindow();
-
+  
   return (
     <div className={styles.workspace}>
       <main>
@@ -46,6 +49,8 @@ export default function Home() {
       </main>
 
       <Taskbar />
+      
+      <div className={styles.background} />
     </div>
   );
 }

@@ -11,8 +11,15 @@
   }
 
   .background {
+    display: flex;
     position: absolute;
     z-index: -9999;
+    
+    width: 100%;
+    height: calc(100vh - 50px);
+    background-size: cover;
+    background-position: 0 60%;
+    background-image: url('/daniel-leone-v7daTKlZzaw-unsplash.webp');
   }
 
 }
