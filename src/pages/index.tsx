@@ -2,6 +2,7 @@ import { Taskbar } from "../components/taskbar";
 import { Icon } from "../components/icon";
 import { Window } from "../components/window";
 import { useWindow } from "../hooks/useControlWindow";
+import { Projects } from "../windows/Projects";
 import styles from "./home.module.scss";
 
 export default function Home() {
@@ -29,35 +30,19 @@ export default function Home() {
           commandToOpenWindow={() => openTheWindow(2, true)}
         />
 
-        { openWindows[0] && (
-          <Window
-            name="Titulo da janela"
-            windowIndex={0}
-          >
-            <h1>Título do conteúdo</h1>
-            <a href="https://google.com">Link</a>
-            <p>em construção...</p>
-          </Window>
-        )}
-
-        { openWindows[1] && (
-          <Window
-            name="Titulo da janela"
-            windowIndex={1}
-          >
-            <h1>Janela 2</h1>
-          </Window>
-        )}
-
-        { openWindows[2] && (
-          <Window
-            name="Titulo da janela"
-            windowIndex={2}
-          >
+        {openWindows[0] && (
+          <Window name="Titulo da janela" windowIndex={0}>
             <h1>Janela 3</h1>
           </Window>
         )}
 
+        {openWindows[1] && <Projects />}
+
+        {openWindows[2] && (
+          <Window name="Titulo da janela" windowIndex={2}>
+            <h1>Janela 3</h1>
+          </Window>
+        )}
       </main>
 
       <Taskbar />
