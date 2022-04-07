@@ -25,6 +25,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    position: relative;
 
     border-radius: 15px 15px 0px 0px;
     background: var(--color1);
@@ -62,7 +63,10 @@
   display: flex;
   flex-direction: row;
 
+  right: 0;
+  justify-self: flex-end;
   align-items: center;
+  gap: .25rem;
   
   button {
     background: none;
