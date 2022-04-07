@@ -1,5 +1,3 @@
-// import { ReactNode } from "react";
-
 export interface IChildrenProps {
   //Context Children Props
   children: React.ReactNode;
@@ -24,4 +22,15 @@ export interface IWindowProps {
   name: string;
   windowIndex: number;
   children?: React.ReactNode;
+}
+
+//Project Component
+
+type Image = {
+  url: string;
+  alt: string;
+}
+
+export interface IComponentProjectProps {
+  image: Image;
 }

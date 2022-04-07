@@ -2,7 +2,7 @@ import { Taskbar } from "../components/taskbar";
 import { Icon } from "../components/icon";
 import { Window } from "../components/window";
 import { useWindow } from "../hooks/useControlWindow";
-import { Projects } from "../windows/Projects";
+import { ProjectScreen } from "../windows/ProjectScreen";
 import styles from "./home.module.scss";
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
         <Icon
           name="Sobre o Matheus"
           alt="Personagem de cor de pele (um rosinha claro), de olhos preto, e com sorrisinho."
-          img="/icons/character.svg"
+          img="https://i.imgur.com/ApMhe5P.png"
           commandToOpenWindow={() => openTheWindow(0, true)}
         />
         <Icon
@@ -36,7 +36,7 @@ export default function Home() {
           </Window>
         )}
 
-        {openWindows[1] && <Projects />}
+        {openWindows[1] && <ProjectScreen />}
 
         {openWindows[2] && (
           <Window name="Titulo da janela" windowIndex={2}>

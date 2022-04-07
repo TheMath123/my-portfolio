@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Anchor } from "../Anchor";
 import { Clock } from "../clock";
 import styles from "./taskbar.module.scss";
 
@@ -14,8 +15,8 @@ export function Taskbar() {
             height={27}
           />
         </button>
-        <button
-          onClick={() => window.open("https://hitext.vercel.app/")}
+        <Anchor
+          url="https://hitext.vercel.app/"
           title="Aplicação do HiText"
         >
           <Image
@@ -24,18 +25,18 @@ export function Taskbar() {
             width={27}
             height={27}
           />
-        </button>
-        <button
-          onClick={() => window.open("https://startmessage.vercel.app/")}
+        </Anchor>
+        <Anchor
+          url="https://startmessage.vercel.app/"
           title="Aplicação do StartMessage"
         >
           <Image
-            src="/startmessage.png"
+            src="https://i.imgur.com/0dxg2EZ.png"
             alt="Logo da Aplicação do StartMessage, um bolãozinho de conversa verde com telefone na cor branco dentro."
             width={30}
             height={30}
           />
-        </button>
+        </Anchor>
       </div>
       <div className={styles.info}>
         <select name="Language" id="1">
