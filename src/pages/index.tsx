@@ -34,16 +34,16 @@ export default function Home() {
         />
 
         {openWindows[0] && (
-          <Window name="Titulo da janela" windowIndex={0}>
-            <h1>Janela 3</h1>
+          <Window name="Sobre o Matheus" windowIndex={0}>
+            <h1>Sobre o Matheus</h1>
           </Window>
         )}
 
         {openWindows[1] && <ProjectScreen />}
 
         {openWindows[2] && (
-          <Window name="Titulo da janela" windowIndex={2}>
-            <h1>Janela 3</h1>
+          <Window name="Fale comigo" windowIndex={2}>
+            <h1>Fale comigo</h1>
           </Window>
         )}
       </main>
