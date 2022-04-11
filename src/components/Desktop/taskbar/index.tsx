@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Anchor } from "../Anchor";
+import { Anchor } from "../../Anchor";
 import { Clock } from "../clock";
 import styles from "./taskbar.module.scss";
 

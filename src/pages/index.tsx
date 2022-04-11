@@ -1,8 +1,8 @@
-import { Taskbar } from "../components/taskbar";
-import { Icon } from "../components/icon";
-import { Window } from "../components/window";
+import { Taskbar } from "../components/Desktop/taskbar";
+import { Icon } from "../components/Desktop/icon";
+import { Window } from "../components/Windows/window";
 import { useWindow } from "../hooks/useControlWindow";
-import { ProjectScreen } from "./windows/ProjectScreen";
+import { ProjectScreen } from "../components/Windows/Projects/ProjectScreen";
 import styles from "./home.module.scss";
 
 export default function Home() {

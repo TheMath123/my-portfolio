@@ -1,9 +1,9 @@
-import { IComponentProjectProps } from '../../@types';
-import { Badge } from "../Badge";
+import { IComponentProjectProps } from '../../../../@types';
+import { Badge } from "../../../Badge";
 import styles from './project.module.scss';
 
 //--------------------->image
-export function Project({}: IComponentProjectProps,){
+export function ProjectItem({}: IComponentProjectProps,){
   return(
     <div className={styles.container}>
       <div className={styles.contentImage}>
