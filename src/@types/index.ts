@@ -3,11 +3,15 @@ export interface IChildrenProps {
   children: React.ReactNode;
 }
 
+// <------------------------------------------>
+
 export interface IOpenWindowContextProps {
   //Context Props
   openWindows: boolean[];
   openTheWindow: (index: number, open: boolean) => void;
 }
+
+// <------------------------------------------>
 
 export interface IIconProps {
   //Component Icon
@@ -17,6 +21,8 @@ export interface IIconProps {
   commandToOpenWindow: () => void;
 }
 
+// <------------------------------------------>
+
 export interface IWindowProps {
   //Component Window
   name: string;
@@ -24,8 +30,9 @@ export interface IWindowProps {
   children?: React.ReactNode;
 }
 
-//Project Component
+// <------------------------------------------>
 
+//Project Component
 type Image = {
   url: string;
   alt: string;
