@@ -1,12 +1,9 @@
-import Image from 'next/image';
 import { Taskbar } from "../components/taskbar";
 import { Icon } from "../components/icon";
 import { Window } from "../components/window";
 import { useWindow } from "../hooks/useControlWindow";
-import { ProjectScreen } from "../windows/ProjectScreen";
+import { ProjectScreen } from "./windows/ProjectScreen";
 import styles from "./home.module.scss";
-import { useEffect } from 'react';
-
 
 export default function Home() {
   const { openWindows, openTheWindow } = useWindow();

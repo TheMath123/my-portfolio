@@ -1,0 +1,13 @@
+.badgebox {
+  display: flex;
+  height: 24px;
+  padding: .2rem .5rem;
+  border-radius: 15px;
+
+  .title {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: .8rem;
+    color: white;
+  }
+}

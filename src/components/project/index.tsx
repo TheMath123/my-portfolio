@@ -1,16 +1,20 @@
-import Image from "next/image";
 import { IComponentProjectProps } from '../../@types';
+import { Badge } from "../Badge";
 import styles from './project.module.scss';
 
-export function Project({image}: IComponentProjectProps,){
+//--------------------->image
+export function Project({}: IComponentProjectProps,){
   return(
     <div className={styles.container}>
       <div className={styles.contentImage}>
-        <Image src={image.url} alt={image.alt} width={47} height={47} />
+        {/* <Image src={image.url} alt={image.alt} width={47} height={47} /> */}
       </div>
 
       <main className={styles.contentDescription}>
-
+        <Badge
+          title="Javascript"
+          color="js"
+        />
       </main>
 
       <nav className={styles.contentLinks}>
