@@ -11,10 +11,8 @@ export function Project({}: IComponentProjectProps,){
       </div>
 
       <main className={styles.contentDescription}>
-        <Badge
-          title="Javascript"
-          color="js"
-        />
+        <Badge title="Javascript" color="js"/>
+        <Badge title="Mobile First" color="mobile"/>
       </main>
 
       <nav className={styles.contentLinks}>

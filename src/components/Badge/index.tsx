@@ -27,7 +27,7 @@ export function Badge(props: BadgeProps){
   return(
     <main 
       ref={mainCompRef}
-      className={styles.badgebox}
+      className={styles.badgeBox}
       onClick={() => window.open(props.url)}
     >
       <span className={styles.title}>{props.title}</span>
