@@ -22,4 +22,15 @@
     background-image: url('/daniel-leone-v7daTKlZzaw-unsplash.webp');
   }
 
+  .alert {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    z-index: 9999;
+
+    padding: .5rem;
+    border-radius: 15px;
+    background: rgba(196, 196, 196, 0.16);
+  }
+
 }

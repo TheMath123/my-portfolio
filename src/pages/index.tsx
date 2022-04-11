@@ -30,6 +30,8 @@ export default function Home() {
           commandToOpenWindow={() => openTheWindow(2, true)}
         />
 
+        <div className={styles.alert}>Em construção 🚧</div>
+
         {openWindows[0] && (
           <Window name="Sobre o Matheus" windowIndex={0}>
             <h1>Sobre o Matheus</h1>
