@@ -10,7 +10,7 @@ export default function Home() {
   
   return (
     <div className={styles.workspace}>
-      <main>
+      <main className={styles.desktop}>
         <Icon
           name="Sobre o Matheus"
           alt="Personagem de cor de pele (um rosinha claro), de olhos preto, e com sorrisinho."
