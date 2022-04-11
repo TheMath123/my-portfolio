@@ -38,6 +38,22 @@ type Image = {
   alt: string;
 }
 
+type BadgeItem = {
+  title: string;
+  color: string;
+  url?: string;
+} 
+
+type Repository = {
+  projectURL: string;
+  demoURL: string;
+}
+
 export interface IComponentProjectProps {
+  title: string;
+  description: string;
   image: Image;
+  techs: BadgeItem[];
+  concepts: BadgeItem[];
+  repository: Repository;
 }

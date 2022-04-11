@@ -20,7 +20,7 @@ export function Window({ name, windowIndex, children }: IWindowProps) {
         <div className={styles.btnsWindow}>
           <button className={styles.minimize} onClick={() => setMax(false)}>
             <Image
-              src="/window/minimize.svg"
+              src="/icons/window/minimize.svg"
               alt="Minimizar"
               width={20}
               height={20}
@@ -29,7 +29,7 @@ export function Window({ name, windowIndex, children }: IWindowProps) {
 
           <button className={styles.maximize} onClick={() => setMax(true)}>
             <Image
-              src="/window/maximize.svg"
+              src="/icons/window/maximize.svg"
               alt="Maximizar"
               width={20}
               height={20}
@@ -38,7 +38,7 @@ export function Window({ name, windowIndex, children }: IWindowProps) {
 
           <button className={styles.close} onClick={() =>openTheWindow(windowIndex, false)}>
             <Image
-              src="/window/close.svg"
+              src="/icons/window/close.svg"
               alt="Fechar"
               width={20}
               height={20}

@@ -20,13 +20,13 @@ export default function Home() {
         <Icon
           name="Projetos"
           alt="Caderno marron, com um etiqueta branca na capa, e com marcadores de pagina coloridos."
-          img="/icons/files.svg"
+          img="/icons/desktop/files.svg"
           commandToOpenWindow={() => openTheWindow(1, true)}
         />
         <Icon
           name="Fale comigo"
           alt="Um balão de conversar amarelo com rostinho dentro, saindo de um ícone de telefone na cor vermelha."
-          img="/icons/call.svg"
+          img="/icons/desktop/call.svg"
           commandToOpenWindow={() => openTheWindow(2, true)}
         />
 

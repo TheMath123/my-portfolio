@@ -20,7 +20,7 @@ export function Taskbar() {
           title="Aplicação do HiText"
         >
           <Image
-            src="/hitext.svg"
+            src="/icons/taskbar/hitext.svg"
             alt="Logo da Aplicação do HiText, um circulo branco com letra H e T dentro na cor preta."
             width={27}
             height={27}
