@@ -53,7 +53,7 @@ export interface IComponentProjectProps {
   title: string;
   description: string;
   image: Image;
-  techs?: BadgeItem[];
-  concepts?: BadgeItem[];
+  techs?: BadgeItem[] | null;
+  concepts?: BadgeItem[] | null;
   repository: Repository;
 }

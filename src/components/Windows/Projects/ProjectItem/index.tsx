@@ -22,7 +22,7 @@ export function ProjectItem({image, description, title, techs, concepts, reposit
             <h2>Tecnologias Usadas</h2>
             <ul>
               {techs.map( (value, index) => {
-                <Badge key={index} title={value.title} color={value.color} url={value.url} />
+                return <Badge key={index} title={value.title} color={value.color} url={value.url} />
               })}
             </ul>
           </div>
@@ -30,7 +30,7 @@ export function ProjectItem({image, description, title, techs, concepts, reposit
             <h2>Conceitos utilizados</h2>
             <ul>
               {concepts.map( (value, index) => {
-                <Badge key={index} title={value.title} color={value.color} url={value.url} />
+                return <Badge key={index} title={value.title} color={value.color} url={value.url} />
               })}
             </ul>
           </div>
