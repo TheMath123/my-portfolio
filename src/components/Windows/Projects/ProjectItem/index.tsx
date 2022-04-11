@@ -1,5 +1,5 @@
 import { IComponentProjectProps } from '../../../../@types';
-import { Badge } from "../../../Badge";
+import { Badge } from "../../../Utility/Badge";
 import styles from './project.module.scss';
 
 //--------------------->image
