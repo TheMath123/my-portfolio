@@ -1,0 +1,79 @@
+.container {
+  display: grid;
+  grid-template-columns: 60px 1fr 132px;
+  gap: 2rem; //32px
+  padding: 2rem; //32px
+}
+
+.contentDescription {
+  display: flex;
+  gap: 1.75rem; //28px
+}
+
+.contentDescription{
+  display: flex;
+
+  .description {
+    display: flex;
+    flex-direction: column;
+    gap: .2rem; //3.2px
+
+    h1 {
+      font-weight: 600;
+      font-size: 2rem; //32px
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 1.2rem; //19.2px
+    }
+  }
+}
+
+.badgesBox {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem; //64px
+  flex-wrap: wrap;
+
+
+  .technologies {
+    display: flex;
+    flex-direction: column;
+    gap: .2rem; //3.2px
+
+    h2 {
+      font-weight: 300;
+      font-size: 1.1rem; //17.6px
+    }
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      gap: 9px;
+    }
+  }
+}
+
+.contentLinks {
+  display: flex;
+  flex-direction: column;
+  justify-self: flex-end;
+  
+  button {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: .5rem; //8px
+
+    background: none;
+    border: none;
+
+    span {
+      font-weight: lighter;
+      font-size: 1rem; //~18px
+      color: white
+    }
+  }
+}

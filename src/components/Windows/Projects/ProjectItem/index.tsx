@@ -14,10 +14,10 @@ export function ProjectItem({image, description, title, techs, concepts, reposit
       <main className={styles.contentDescription}>
         <div className={styles.description}>
           <h1>{title}</h1>
-          <article>{description}</article>
+          <p>{description}</p>
         </div>
 
-        <footer>
+        <footer className={styles.badgesBox}>
           <div className={styles.technologies}>
             <h2>Tecnologias Usadas</h2>
             <ul>
@@ -39,12 +39,12 @@ export function ProjectItem({image, description, title, techs, concepts, reposit
 
       <nav className={styles.contentLinks}>
         <Anchor title='Demo' url={repository.demoURL}> 
-          <Image src='https://i.imgur.com/nI0TLjX.png' alt='Um aviãozinho da cor cinza' width={47} height={47} />
+          <Image src='https://i.imgur.com/nI0TLjX.png' alt='Um aviãozinho da cor cinza' width={32} height={32} />
           <span>Demo</span>
         </Anchor>
 
         <Anchor title='Repositório' url={repository.projectURL}> 
-          <Image src='/icons/projects/gitIcon.svg' alt='Logotipo do git em cor cinza' width={47} height={47} />
+          <Image src='/icons/projects/gitIcon.svg' alt='Logotipo do git em cor cinza' width={32} height={32} />
           <span>Repositório</span>
         </Anchor>
       </nav>
