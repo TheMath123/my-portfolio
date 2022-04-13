@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { IWindowProps } from "../../../@types";
-import { useWindow } from '../../../hooks/useControlWindow';
+import { useWindow } from "../../../hooks/useControlWindow";
 import styles from "./window.module.scss";
 
 export function Window({ name, windowIndex, children }: IWindowProps) {
@@ -18,28 +18,43 @@ export function Window({ name, windowIndex, children }: IWindowProps) {
       <header>
         <span className={styles.title}>{name}</span>
         <div className={styles.btnsWindow}>
-          <button className={styles.minimize} onClick={() => setMax(false)}>
+          <button className={styles.minimize} onClick={() => {}}>
             <Image
               src="/icons/window/minimize.svg"
-              alt="Minimizar"
+              alt="Minimizar janela"
               width={20}
               height={20}
             />
           </button>
 
-          <button className={styles.maximize} onClick={() => setMax(true)}>
-            <Image
-              src="/icons/window/maximize.svg"
-              alt="Maximizar"
-              width={20}
-              height={20}
-            />
+          <button
+            className={styles.maximize}
+            onClick={() => (max ? setMax(false) : setMax(true))}
+          >
+            {max ? (
+              <Image
+                src="/icons/window/demaximize.svg"
+                alt="Diminuir janela"
+                width={20}
+                height={20}
+              />
+            ) : (
+              <Image
+                src="/icons/window/maximize.svg"
+                alt="Maximizar janela"
+                width={20}
+                height={20}
+              />
+            )}
           </button>
 
-          <button className={styles.close} onClick={() =>openTheWindow(windowIndex, false)}>
+          <button
+            className={styles.close}
+            onClick={() => openTheWindow(windowIndex, false)}
+          >
             <Image
               src="/icons/window/close.svg"
-              alt="Fechar"
+              alt="Fechar janela"
               width={20}
               height={20}
             />

@@ -78,7 +78,7 @@
 
     cursor: pointer;
 
-    transition: filter .2s;
+    transition: all .2s;
 
     &:hover {
       filter: brightness(.9);

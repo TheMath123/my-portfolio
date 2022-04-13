@@ -6,7 +6,7 @@ export function ProjectScreen() {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    setProjects("../../../assets/projects.json");
+    // setProjects("../../../assets/projects.json");
   });
 
   return (
