@@ -9,7 +9,7 @@ export function Taskbar() {
       <div className={styles.icons}>
         <button title="Doors">
           <Image
-            src="/door.svg"
+            src="/icons/taskbar/door.svg"
             alt="Icone de uma porta na cor branca."
             width={27}
             height={27}

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "./clock.module.scss";
-
+// eslint-disable
 export function Clock(): JSX.Element {
   const [currentDate, setCurrentDate] = useState<Date>(new Date());
   const [currentTime, setCurrentTime] = useState<Date>(new Date());

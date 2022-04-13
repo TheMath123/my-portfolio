@@ -59,21 +59,51 @@
   display: flex;
   flex-direction: column;
   justify-self: flex-end;
+  gap: .5rem;
   
   button {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    padding: .8rem;
     align-items: center;
     gap: .5rem; //8px
 
     background: none;
     border: none;
+    border-radius: 15px;
+    cursor: pointer;
+
+    transition: all .2s;
+
+    &:hover {
+      transform: scale(0.9);
+      border-radius: 15px;
+      background: rgba($color: #afafaf, $alpha: 0.3);
+    }
 
     span {
       font-weight: lighter;
-      font-size: 1rem; //~18px
+      font-size: 1rem; //16px
       color: white
     }
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem; //16px
+  }
+
+  .badgesBox {
+    gap: 1rem;//16px
+  }
+
+  .contentLinks {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
   }
 }
