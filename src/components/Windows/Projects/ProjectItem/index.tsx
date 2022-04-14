@@ -64,8 +64,8 @@ export function ProjectItem({
             layout="fixed"
             src="https://i.imgur.com/nI0TLjX.png"
             alt="Um aviãozinho da cor cinza"
-            width={32}
-            height={32}
+            width={29}
+            height={29}
           />
           <span>Demo</span>
         </Anchor>
@@ -75,8 +75,8 @@ export function ProjectItem({
             layout="fixed"
             src="/icons/projects/gitIcon.svg"
             alt="Logotipo do git em cor cinza"
-            width={32}
-            height={32}
+            width={29}
+            height={29}
           />
           <span>Repositório</span>
         </Anchor>
