@@ -13,9 +13,8 @@ export function ProjectScreen() {
     <Window name="Projetos" windowIndex={1}>
       {projects.map((item, index) => {
         return (
-          <div className={styles.projectBox}>
+          <div className={styles.projectBox} key={index}>
             <ProjectItem
-              key={index}
               title={item.title}
               description={item.description}
               image={item.image}
