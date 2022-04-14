@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Image from "next/image";
-import { ProjectItem } from "./ProjectItem";
+import { ProjectItem } from "../../Utility/ProjectItem";
 import { Window } from "../window";
 import { Anchor } from "../../Utility/Anchor";
 import projectsList from "../../../assets/projects.json";
