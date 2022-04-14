@@ -1,0 +1,21 @@
+.badgeBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+
+  // height: 24px;
+  padding: 5.6px 11px;
+  border-radius: 15px;
+
+   &::-webkit-scrollbar {
+     display: none;
+   }
+
+  .title {
+    font-weight: 500;
+    font-size: .8rem; //12.8px
+    color: white;
+  }
+}

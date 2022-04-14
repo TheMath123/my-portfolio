@@ -1,0 +1,44 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  gap: .2rem;
+  padding: 1rem .2rem .2rem .2rem;
+  max-width: 80px;
+
+  cursor: pointer;
+
+  transition: all .2s;
+
+  &:hover {
+    transform: scale(1.1);
+    .background {
+      display: flex;
+    }
+  }
+
+  &:active {
+    transform: scale(.8);
+  }
+
+  span {
+    text-align: center;
+    font-size: .9rem;
+    font-weight: 500;
+  }
+
+  
+  .background {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: hsla(0, 0%, 47%, 0.219);  
+    border: solid 1px hsla(0, 0%, 24%, 0.527);
+    border-radius: 15px;
+    z-index: -999;
+  }
+}

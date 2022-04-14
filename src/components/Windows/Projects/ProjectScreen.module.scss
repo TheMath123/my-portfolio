@@ -1,0 +1,114 @@
+.projectBox {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 1rem 2rem;
+  gap: 2rem;
+
+  .partition {
+    display: flex;
+    width: 100%;
+    height: 1px;
+
+    border: none;
+    border-radius: 15px;
+    background: white;
+  }
+}
+
+.otherProjects {
+  display: grid;
+  grid-template-columns: 60px 1fr 300px;
+  width: 100%;
+
+  padding: 1rem 2rem;
+  margin-bottom: 3rem;
+  gap: 2rem; //32px
+
+  .descOtherProjects {
+    display: flex;
+    flex-direction: column;
+    gap: .2rem; //3.2px
+
+    h1 {
+      font-weight: 600;
+      font-size: 2rem; //32px
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 1.2rem; //19.2px
+    }
+  }
+
+  button {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: .8rem;
+    gap: .5rem; //8px
+    margin-bottom: 2rem;
+
+    justify-self: flex-end;
+
+    background: none;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+
+    transition: all .2s;
+
+    &:hover {
+      transform: scale(0.9);
+      border-radius: 15px;
+      background: rgba($color: #afafaf, $alpha: 0.3);
+    }
+
+    span {
+      font-weight: lighter;
+      font-size: 1rem; //32px
+      color: white
+    }
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .projectBox {
+    padding: 1rem;
+    gap: .5rem;
+  }
+
+  .otherProjects {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+
+
+    button {
+      align-self: flex-start;
+      margin-bottom: 2rem; 
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .projectBox {
+    padding: .5rem;
+    gap: .5rem;
+  }
+
+  .otherProjects {
+    display: flex;
+    flex-direction: column;
+    padding: .5rem;
+
+    button {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+    }
+  } 
+}
