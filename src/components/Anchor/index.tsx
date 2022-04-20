@@ -1,16 +1,16 @@
 type ButtonProps = {
-  url: string;
+  url?: string;
   title: string;
   children: React.ReactNode;
-}
+};
 
-export function Anchor(props: ButtonProps){
-  return(
+export function Anchor(props: ButtonProps) {
+  return (
     <button
-      onClick={() => window.open(props.url)}
+      onClick={() => (props.url ? window.open(props.url) : {})}
       title={props.title}
     >
       {props.children}
-    </button>  
-)
+    </button>
+  );
 }

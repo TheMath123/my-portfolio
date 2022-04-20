@@ -7,19 +7,9 @@ export function TalkToMeScreen() {
     <Window name="Fale comigo" windowIndex={2}>
       <div className={styles.container}>
         <Contact
-          title="WhatsApp"
-          description="+55 (18) 9 9 9811 0199"
-          url=""
-          imageUrl="/icons/contacts/whatsapp.webp"
-          imageAlt="Balão de conversar preenchido na cor verde, 
-          com borda branca e também o telefone na cor branca dentro 
-          do balão"
-        />
-
-        <Contact
           title="E-mail"
           description="mat.matheus_pa@hotmail.com"
-          url=""
+          url="mailto:mat.matheus_pa@hotmail.com"
           imageUrl="/icons/contacts/email.webp"
           imageAlt="Envelope na cor azul"
         />
@@ -27,7 +17,7 @@ export function TalkToMeScreen() {
         <Contact
           title="Linkedin"
           description="matheus-p-agostinho"
-          url=""
+          url="https://www.linkedin.com/in/matheus-p-agostinho/"
           imageUrl="/icons/contacts/linkedin.webp"
           imageAlt="Quadrado com borda arrendondada na cor azul,
           com letras i n em cor branca no meio"
@@ -36,7 +26,7 @@ export function TalkToMeScreen() {
         <Contact
           title="Github"
           description="TheMath123"
-          url=""
+          url="https://github.com/TheMath123"
           imageUrl="/icons/contacts/github.webp"
           imageAlt="Circulo na cor azul arroxeado 
           com gato polvo simbolo do github dentro na cor do fundo"
@@ -45,8 +35,7 @@ export function TalkToMeScreen() {
         <Contact
           title="Discord"
           description="TheMath123#2823"
-          url=""
-          imageUrl="/icons/contacts/discord.webp"
+          imageUrl="/icons/contacts/discord.svg"
           imageAlt="Logotipo do discord o controle na cor azul"
         />
       </div>

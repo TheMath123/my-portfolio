@@ -5,7 +5,7 @@ import styles from "./contact.module.scss";
 type ContactProps = {
   title: string;
   description: string;
-  url: string;
+  url?: string;
   imageUrl: string;
   imageAlt: string;
 };
@@ -17,8 +17,8 @@ export function Contact(props: ContactProps) {
         <Image
           src={props.imageUrl}
           alt={props.imageAlt}
-          height={34}
-          width={34}
+          height={54}
+          width={54}
         />
       </div>
       <div className={styles.infos}>
