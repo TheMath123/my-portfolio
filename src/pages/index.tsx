@@ -1,10 +1,10 @@
 import { useWindow } from "../hooks/useControlWindow";
-import { Taskbar } from "../components/Desktop/taskbar";
-import { Icon } from "../components/Desktop/icon";
+import { Taskbar } from "../components/taskbar";
+import { Icon } from "../components/icon";
 
-import { ProjectScreen } from "../components/Windows/Projects/ProjectScreen";
-import { TalkToMeScreen } from "../components/Windows/TalkToMe/TalkToMeScreen";
-import { AboutMeScreen } from "../components/Windows/AboutMe/AboutMeScreen";
+import { ProjectScreen } from "./Projects/ProjectScreen";
+import { AboutMeScreen } from "./AboutMe/AboutMeScreen";
+import { TalkToMeScreen } from "./TalkToMe/TalkToMeScreen";
 
 import styles from "./home.module.scss";
 

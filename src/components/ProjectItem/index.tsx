@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { IComponentProjectProps } from "../../../@types";
+import { IComponentProjectProps } from "../../@types";
 import { Anchor } from "../Anchor";
 import { Badge } from "../Badge";
 import styles from "./project.module.scss";

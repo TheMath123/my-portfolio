@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Anchor } from "../../Utility/Anchor";
+import { Anchor } from "../Anchor";
 import { Clock } from "../clock";
 import styles from "./taskbar.module.scss";
 
@@ -15,10 +15,7 @@ export function Taskbar() {
             height={27}
           />
         </button>
-        <Anchor
-          url="https://hitext.vercel.app/"
-          title="Aplicação do HiText"
-        >
+        <Anchor url="https://hitext.vercel.app/" title="Aplicação do HiText">
           <Image
             src="/icons/taskbar/hitext.svg"
             alt="Logo da Aplicação do HiText, um circulo branco com letra H e T dentro na cor preta."

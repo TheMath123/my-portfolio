@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Image from "next/image";
-import { IWindowProps } from "../../../@types";
-import { useWindow } from "../../../hooks/useControlWindow";
+import { IWindowProps } from "../../@types";
+import { useWindow } from "../../hooks/useControlWindow";
 import styles from "./window.module.scss";
 
 export function Window({ name, windowIndex, children }: IWindowProps) {

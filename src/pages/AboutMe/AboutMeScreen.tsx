@@ -1,4 +1,4 @@
-import { Window } from "../window";
+import { Window } from "../../components/window";
 // import styles from "AboutMe.module.scss";
 
 export function AboutMeScreen() {
