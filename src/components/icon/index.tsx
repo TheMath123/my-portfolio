@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { IIconProps } from "../../../@types";
+import { IIconProps } from "../../@types";
 import styles from "./icon.module.scss";
 
 export function Icon({ name, alt, img, commandToOpenWindow }: IIconProps) {

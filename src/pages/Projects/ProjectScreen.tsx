@@ -1,9 +1,9 @@
 import { useState } from "react";
 import Image from "next/image";
-import { ProjectItem } from "./ProjectItem";
-import { Window } from "../window";
-import { Anchor } from "../../Utility/Anchor";
-import projectsList from "../../../assets/projects.json";
+import { ProjectItem } from "../../components/ProjectItem";
+import { Window } from "../../components/window";
+import { Anchor } from "../../components/Anchor";
+import projectsList from "../../assets/projects.json";
 import styles from "./ProjectScreen.module.scss";
 
 export function ProjectScreen() {

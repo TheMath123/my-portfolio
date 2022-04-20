@@ -1,13 +1,16 @@
-import { Taskbar } from "../components/Desktop/taskbar";
-import { Icon } from "../components/Desktop/icon";
-import { Window } from "../components/Windows/window";
 import { useWindow } from "../hooks/useControlWindow";
-import { ProjectScreen } from "../components/Windows/Projects/ProjectScreen";
+import { Taskbar } from "../components/taskbar";
+import { Icon } from "../components/icon";
+
+import { ProjectScreen } from "./Projects/ProjectScreen";
+import { AboutMeScreen } from "./AboutMe/AboutMeScreen";
+import { TalkToMeScreen } from "./TalkToMe/TalkToMeScreen";
+
 import styles from "./home.module.scss";
 
 export default function Home() {
   const { openWindows, openTheWindow } = useWindow();
-  
+
   return (
     <div className={styles.workspace}>
       <main className={styles.desktop}>
@@ -32,23 +35,15 @@ export default function Home() {
 
         <div className={styles.alert}>Em construção 🚧</div>
 
-        {openWindows[0] && (
-          <Window name="Sobre o Matheus" windowIndex={0}>
-            <h1>Sobre o Matheus</h1>
-          </Window>
-        )}
+        {openWindows[0] && <AboutMeScreen />}
 
         {openWindows[1] && <ProjectScreen />}
 
-        {openWindows[2] && (
-          <Window name="Fale comigo" windowIndex={2}>
-            <h1>Fale comigo</h1>
-          </Window>
-        )}
+        {openWindows[2] && <TalkToMeScreen />}
       </main>
 
       <Taskbar />
-      
+
       <div className={styles.background} />
     </div>
   );
