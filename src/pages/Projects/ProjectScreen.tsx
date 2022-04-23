@@ -6,7 +6,7 @@ import { Anchor } from "../../components/Anchor";
 import projectsList from "../../assets/projects.json";
 import styles from "./ProjectScreen.module.scss";
 
-export function ProjectScreen() {
+export default function ProjectScreen() {
   const [projects] = useState(projectsList);
 
   return (
