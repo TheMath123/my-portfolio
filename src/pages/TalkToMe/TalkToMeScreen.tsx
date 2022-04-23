@@ -11,7 +11,7 @@ export default function TalkToMeScreen() {
           title="E-mail"
           description="mat.matheus_pa@hotmail.com"
           url="mailto:mat.matheus_pa@hotmail.com"
-          imageUrl="/icons/contacts/email.webp"
+          imageUrl="https://i.imgur.com/YORypce.png"
           imageAlt="Envelope na cor azul"
         />
 
@@ -19,7 +19,7 @@ export default function TalkToMeScreen() {
           title="Linkedin"
           description="matheus-p-agostinho"
           url="https://www.linkedin.com/in/matheus-p-agostinho/"
-          imageUrl="/icons/contacts/linkedin.webp"
+          imageUrl="https://i.imgur.com/QAdGtdq.png"
           imageAlt="Quadrado com borda arrendondada na cor azul,
           com letras i n em cor branca no meio"
         />
@@ -28,7 +28,7 @@ export default function TalkToMeScreen() {
           title="Github"
           description="TheMath123"
           url="https://github.com/TheMath123"
-          imageUrl="/icons/contacts/github.webp"
+          imageUrl="https://i.imgur.com/SDKuVRN.png"
           imageAlt="Circulo na cor azul arroxeado 
           com gato polvo simbolo do github dentro na cor do fundo"
         />
