@@ -21,9 +21,8 @@
   transition: all .5s;
 
   header {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
     position: relative;
 
@@ -31,6 +30,8 @@
     background: var(--color1);
     
     span {
+      display: flex;
+      justify-self: end;
       font-weight: 500;
       font-size: 1rem;
       color: #E8E8E8;
