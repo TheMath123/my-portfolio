@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { Window } from "../../components/window";
-import styles from "./AboutMe.module.scss";
+import styles from "./aboutMe.module.scss";
 
 export default function AboutMeScreen() {
   const image = 'https://i.imgur.com/u0QBOKH.jpg';

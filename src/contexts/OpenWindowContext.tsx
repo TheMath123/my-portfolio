@@ -4,7 +4,7 @@ import { IChildrenProps, IOpenWindowContextProps } from "../@types";
 export const OpenWindowContext = createContext({} as IOpenWindowContextProps);
 
 export function OpenWindowProvider({ children }: IChildrenProps) {
-  const [openWindows, setOpenWindows] = useState<boolean[]>([false, false, false]);
+  const [openWindows, setOpenWindows] = useState<boolean[]>([false, false, false, false]);
 
   function openTheWindow(indexWindow: number, open: boolean) {
     setOpenWindows(

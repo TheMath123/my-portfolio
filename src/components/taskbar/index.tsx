@@ -1,9 +1,16 @@
 import Image from "next/image";
+import { useWindow } from "../../hooks/useControlWindow";
 import { Anchor } from "../Anchor";
 import { Clock } from "../clock";
 import styles from "./taskbar.module.scss";
 
 export function Taskbar() {
+  const { openWindows, openTheWindow } = useWindow();
+
+  function setOpenPage(){
+    // return <IconTaskBar>
+  }
+
   return (
     <div className={styles.taskbar}>
       <div className={styles.icons}>
@@ -34,6 +41,9 @@ export function Taskbar() {
             height={30}
           />
         </Anchor>
+        {
+          setOpenPage()
+        }
       </div>
       <div className={styles.info}>
         <select name="Language" id="1">
@@ -47,3 +57,4 @@ export function Taskbar() {
     </div>
   );
 }
+

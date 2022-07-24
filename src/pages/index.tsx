@@ -5,6 +5,7 @@ import { Icon } from "../components/icon";
 import ProjectScreen from "./Projects/ProjectScreen";
 import AboutMeScreen from "./AboutMe/AboutMeScreen";
 import TalkToMeScreen from "./TalkToMe/TalkToMeScreen";
+import NavigatorScreen from "./Navigator/NavigatorScreen";
 
 import styles from "./home.module.scss";
 
@@ -40,6 +41,8 @@ export default function Home() {
         {openWindows[1] && <ProjectScreen />}
 
         {openWindows[2] && <TalkToMeScreen />}
+
+        {/* {openWindows[3] && <NavigatorScreen />} */}
       </main>
 
       <Taskbar />
