@@ -33,7 +33,7 @@ export default function Home() {
           commandToOpenWindow={() => openTheWindow(2, true)}
         />
 
-        <div className={styles.alert}>Em construção 🚧</div>
+        {/* <div className={styles.alert}>Em construção 🚧</div> */}
 
         {openWindows[0] && <AboutMeScreen />}
 
