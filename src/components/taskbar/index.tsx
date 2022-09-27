@@ -28,7 +28,7 @@ export function Taskbar() {
           title="Aplicação do StartMessage"
         >
           <Image
-            src="https://i.imgur.com/0dxg2EZ.png"
+            src="https://firebasestorage.googleapis.com/v0/b/matheuspa-projects.appspot.com/o/my-portfolio%2Ficons%2Fwhatsapp.png?alt=media&token=2247e103-d938-4ca2-a064-56b7c2704dd2"
             alt="Logo da Aplicação do StartMessage, um bolãozinho de conversa verde com telefone na cor branco dentro."
             width={30}
             height={30}

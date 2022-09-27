@@ -17,7 +17,7 @@ export default function Home() {
         <Icon
           name="Sobre o Matheus"
           alt="Personagem de cor de pele (um rosinha claro), de olhos preto, e com sorrisinho."
-          img="https://i.imgur.com/ApMhe5P.png"
+          img="https://firebasestorage.googleapis.com/v0/b/matheuspa-projects.appspot.com/o/my-portfolio%2Ficons%2Fabout-me.png?alt=media&token=ff3060f1-39d3-4350-8ea9-5b90d3134f1d"
           commandToOpenWindow={() => openTheWindow(0, true)}
         />
         <Icon
