@@ -5,7 +5,6 @@
   height: 100vh;
   width: 100vw;
 
-
   .desktop {
     padding: 1rem;
   }
@@ -14,12 +13,12 @@
     display: flex;
     position: absolute;
     z-index: -9999;
-    
+
     width: 100%;
     height: calc(100vh - 50px);
     background-size: cover;
     background-position: 0 60%;
-    background-image: url('https://i.imgur.com/DpKaE81.jpg');
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/matheuspa-projects.appspot.com/o/my-portfolio%2Fothers%2Fdaniel-leone-197357-unsplash.jpg?alt=media&token=ac6af3e2-cfa8-4d19-8d09-3c490eedc554");
   }
 
   .alert {
@@ -28,9 +27,8 @@
     right: 5%;
     z-index: 9999;
 
-    padding: .5rem;
+    padding: 0.5rem;
     border-radius: 15px;
     background: rgba(196, 196, 196, 0.16);
   }
-
 }

@@ -23,7 +23,10 @@ export function Contact(props: ContactProps) {
       </div>
       <div className={styles.infos}>
         <h1>{props.title}</h1>
-        <Anchor url={props.url} title={props.description}>
+        <Anchor
+          url={props.url}
+          title={props.description}
+        >
           {props.description}
         </Anchor>
       </div>

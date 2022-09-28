@@ -48,7 +48,7 @@ export default function ProjectScreen() {
         >
           <Image
             layout="fixed"
-            src="https://i.imgur.com/nI0TLjX.png"
+            src="https://firebasestorage.googleapis.com/v0/b/matheuspa-projects.appspot.com/o/my-portfolio%2Ficons%2Fairplane.png?alt=media&token=b492a411-2c6a-4fbe-a11d-677b46c4d6c6"
             alt="Um aviãozinho da cor cinza"
             width={29}
             height={29}
