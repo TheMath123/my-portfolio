@@ -1,3 +1,4 @@
+import { Toaster } from "react-hot-toast";
 import { useWindow } from "../hooks/useControlWindow";
 import { Taskbar } from "../components/taskbar";
 import { Icon } from "../components/icon";
@@ -13,6 +14,7 @@ export default function Home() {
 
   return (
     <div className={styles.workspace}>
+      <Toaster />
       <main className={styles.desktop}>
         <Icon
           name="Sobre o Matheus"

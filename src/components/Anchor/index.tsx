@@ -1,3 +1,5 @@
+import styles from './anchor.module.scss';
+
 type ButtonProps = {
   url?: string;
   title: string;
@@ -7,7 +9,12 @@ type ButtonProps = {
 export function Anchor(props: ButtonProps) {
   return (
     <button
-      onClick={() => (props.url ? window.open(props.url) : {})}
+      className={styles.button}
+      onClick={() =>
+        props.url
+          ? window.open(props.url)
+          : navigator.clipboard.writeText(props.title)
+      }
       title={props.title}
     >
       {props.children}
