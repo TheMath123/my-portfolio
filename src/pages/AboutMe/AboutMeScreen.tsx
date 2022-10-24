@@ -15,7 +15,7 @@ export default function AboutMeScreen() {
           <main className={styles.main}>
             <div>
               <h1>Matheus P. Agostinho</h1>
-              <p>Desenvolvedor Front-end</p>
+              <p>Desenvolvedor de Software</p>
             </div>
             <div>
               <h3>Sobre</h3>
@@ -26,7 +26,6 @@ export default function AboutMeScreen() {
               <p>
                 <strong>Universidade Federal do Mato Grosso do Sul</strong>
                 Cursando Bacharelado em Sistemas de Informação
-                <span>Previsão de termino 12/2023</span>
               </p>
             </div>
           </main>
