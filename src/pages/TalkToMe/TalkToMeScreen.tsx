@@ -9,8 +9,8 @@ export default function TalkToMeScreen() {
       <div className={styles.container}>
         <Contact
           title="E-mail"
-          description="mat.matheus_pa@hotmail.com"
-          url="mailto:mat.matheus_pa@hotmail.com"
+          description="math.p.agostinho@outlook.com"
+          url="mailto:math.p.agostinho@outlook.com"
           imageUrl="https://firebasestorage.googleapis.com/v0/b/matheuspa-projects.appspot.com/o/my-portfolio%2Ficons%2Fmail.png?alt=media&token=0341b64a-51b9-45d9-bd50-8df459f5d1de"
           imageAlt="Envelope na cor azul"
         />
@@ -29,7 +29,7 @@ export default function TalkToMeScreen() {
           description="TheMath123"
           url="https://github.com/TheMath123"
           imageUrl="https://firebasestorage.googleapis.com/v0/b/matheuspa-projects.appspot.com/o/my-portfolio%2Ficons%2Fgithub.png?alt=media&token=bb96b166-f48f-41fe-b908-7b7657f08cec"
-          imageAlt="Circulo na cor azul arroxeado 
+          imageAlt="Circulo na cor azul arroxeado
           com gato polvo simbolo do github dentro na cor do fundo"
         />
 
