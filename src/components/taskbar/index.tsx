@@ -5,7 +5,7 @@ import { Clock } from "../clock";
 import styles from "./taskbar.module.scss";
 
 export function Taskbar() {
-  const { openWindows } = useWindow();
+  const { openWindows, openTheWindow } = useWindow();
   return (
     <div className={styles.taskbar}>
       <div className={styles.icons}>
@@ -30,7 +30,7 @@ export function Taskbar() {
           title="Aplicação do StartMessage"
         >
           <Image
-            src="https://firebasestorage.googleapis.com/v0/b/matheuspa-projects.appspot.com/o/my-portfolio%2Ficons%2Fwhatsapp.png?alt=media&token=2247e103-d938-4ca2-a064-56b7c2704dd2"
+            src="/icons/projects/whatsapp.png"
             alt="Logo da Aplicação do StartMessage, um bolãozinho de conversa verde com telefone na cor branco dentro."
             width={30}
             height={30}
@@ -38,17 +38,38 @@ export function Taskbar() {
         </Anchor>
 
         {openWindows[0] && (
-          <button title="Doors">
+          <Anchor
+            title="Sobre o Matheus"
+            onClick={() => openTheWindow(0, true)}
+          >
             <Image
-              src="/icons/taskbar/door.svg"
-              alt="Icone de uma porta na cor branca."
+              src="/icons/desktop/about-me.png"
+              alt="Personagem de cor de pele (um rosinha claro), de olhos preto, e com sorrisinho."
               width={27}
               height={27}
             />
-          </button>
+          </Anchor>
         )}
-        {openWindows[1] && <div />}
-        {openWindows[2] && <div />}
+        {openWindows[1] && (
+          <Anchor title="Projetos" onClick={() => openTheWindow(1, true)}>
+            <Image
+              src="/icons/desktop/files.svg"
+              alt="Caderno marron, com um etiqueta branca na capa, e com marcadores de pagina coloridos."
+              width={27}
+              height={27}
+            />
+          </Anchor>
+        )}
+        {openWindows[2] && (
+          <Anchor title="Fale Comigo" onClick={() => openTheWindow(2, true)}>
+            <Image
+              src="/icons/desktop/call.svg"
+              alt="Um balão de conversar amarelo com rostinho dentro, saindo de um ícone de telefone na cor vermelha."
+              width={27}
+              height={27}
+            />
+          </Anchor>
+        )}
       </div>
       <div className={styles.info}>
         <select name="Language" id="1">

@@ -5,15 +5,18 @@ import { useWindow } from "../../hooks/useControlWindow";
 import styles from "./window.module.scss";
 
 export function Window({ name, windowIndex, children }: IWindowProps) {
-  const { openTheWindow } = useWindow();
+  const { openTheWindow, windowZIndex } = useWindow();
 
   const [max, setMax] = useState(false);
+
+  console.log(windowZIndex[windowIndex]);
 
   return (
     <div
       data-message={name}
       title={name}
       className={`${styles.container} ${max && styles.max}`}
+      style={{ zIndex: windowZIndex[windowIndex] }}
     >
       <header>
         <span className={styles.title}>{name}</span>

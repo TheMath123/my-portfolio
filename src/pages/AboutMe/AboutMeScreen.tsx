@@ -8,7 +8,7 @@ export default function AboutMeScreen() {
     <Window name="Sobre o Matheus" windowIndex={0}>
       <div className={styles.container}>
         <div className={styles.leftSide}>
-          <img src={image} alt="Foto do Matheus"/>
+          <img src={image} alt="Foto do Matheus" />
         </div>
         <div className={styles.rightSide}>
           <main className={styles.main}>
@@ -18,7 +18,17 @@ export default function AboutMeScreen() {
             </div>
             <div>
               <h3>Sobre</h3>
-              <p>Sou Matheus, estou envolvido com a área de tecnologia desde a adolescência e adoro aprender sobre esse mundo, sou desenvolvedor há cerca de 5 anos. Atualmente minha stack é desenvolvimento web, porém passei já estudei e pratiquei em várias areas diferentes, passando por desenvolvendo back-end de API Rest, devops aprendendo um pouco de deploy de aplicações e computação em nuvem, segurança da informação aprendendo mais sobre falhas de segurança e como detecta-las, e front-end onde atuo atualmente como desenvolvedor mobile.</p>
+              <p>
+                Sou desenvolvedor de software júnior e entusiasta de tecnologia,
+                utilizo da programação para resolver problemas. Minha jornada
+                começou quando ganhei meu primeiro computador, a partir desse
+                momento fiquei fascinado por esse mundo e aprendi de forma
+                autodidata um pouco tudo de cada área, influenciando-me a
+                escolher o Bacharelado em Sistemas de Informação, que me deu
+                embasamento teórico que ajudam ao longo da minha carreira.
+                Sempre aprimorando minhas habilidades como desenvolvedor de
+                software.
+              </p>
             </div>
             <div>
               <h3>Formação</h3>

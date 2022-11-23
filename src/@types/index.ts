@@ -1,3 +1,5 @@
+import internal from "stream";
+
 export interface IChildrenProps {
   //Context Children Props
   children: React.ReactNode;
@@ -9,6 +11,7 @@ export interface IOpenWindowContextProps {
   //Context Props
   openWindows: boolean[];
   openTheWindow: (index: number, open: boolean) => void;
+  windowZIndex: number[];
 }
 
 // <------------------------------------------>
@@ -42,7 +45,7 @@ type BadgeItem = {
   title: string;
   color: string;
   url?: string;
-} 
+}
 
 type Repository = {
   projectURL?: string;
