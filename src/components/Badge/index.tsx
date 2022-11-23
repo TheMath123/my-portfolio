@@ -19,7 +19,6 @@ export function Badge(props: BadgeProps) {
     if (props.color.charAt(0) === "#") {
       mainCompRef.current.style.background = props.color;
     } else {
-      console.log(mainCompRef.current.style);
       mainCompRef.current.style.background = `var(--${props.color})`;
     }
   }

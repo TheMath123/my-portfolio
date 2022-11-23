@@ -4,8 +4,38 @@ import { Anchor } from "../Anchor";
 import { Clock } from "../clock";
 import styles from "./taskbar.module.scss";
 
+
 export function Taskbar() {
-  const { openWindows } = useWindow();
+  const { openTheWindow, orderTask } = useWindow();
+  const itens = [(<Anchor
+    key={0}
+    title="Sobre o Matheus"
+    onClick={() => openTheWindow(0, true)}
+  >
+    <Image
+      src="/icons/desktop/about-me.png"
+      alt="Personagem de cor de pele (um rosinha claro), de olhos preto, e com sorrisinho."
+      width={27}
+      height={27}
+    />
+  </Anchor>),
+  (<Anchor key={1} title="Projetos" onClick={() => openTheWindow(1, true)}>
+    <Image
+      src="/icons/desktop/files.svg"
+      alt="Caderno marron, com um etiqueta branca na capa, e com marcadores de pagina coloridos."
+      width={27}
+      height={27}
+    />
+  </Anchor>),
+  (<Anchor key={2} title="Fale Comigo" onClick={() => openTheWindow(2, true)}>
+    <Image
+      src="/icons/desktop/call.svg"
+      alt="Um balão de conversar amarelo com rostinho dentro, saindo de um ícone de telefone na cor vermelha."
+      width={27}
+      height={27}
+    />
+    </Anchor>)];
+
   return (
     <div className={styles.taskbar}>
       <div className={styles.icons}>
@@ -30,25 +60,15 @@ export function Taskbar() {
           title="Aplicação do StartMessage"
         >
           <Image
-            src="https://firebasestorage.googleapis.com/v0/b/matheuspa-projects.appspot.com/o/my-portfolio%2Ficons%2Fwhatsapp.png?alt=media&token=2247e103-d938-4ca2-a064-56b7c2704dd2"
+            src="/icons/projects/whatsapp.png"
             alt="Logo da Aplicação do StartMessage, um bolãozinho de conversa verde com telefone na cor branco dentro."
             width={30}
             height={30}
           />
         </Anchor>
 
-        {openWindows[0] && (
-          <button title="Doors">
-            <Image
-              src="/icons/taskbar/door.svg"
-              alt="Icone de uma porta na cor branca."
-              width={27}
-              height={27}
-            />
-          </button>
-        )}
-        {openWindows[1] && <div />}
-        {openWindows[2] && <div />}
+        {orderTask.map((value) => itens[value])}
+
       </div>
       <div className={styles.info}>
         <select name="Language" id="1">
