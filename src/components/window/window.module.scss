@@ -6,7 +6,7 @@
   display: grid;
   grid-template-rows: 32px 1fr;
   position: absolute;
-  
+
   z-index: 100;
 
   top: 10%;
@@ -18,7 +18,11 @@
   background: linear-gradient(168.51deg, #353635 8%, #313236 92.26%);
   border-radius: 15px;
 
-  transition: all .5s;
+  transition: all 0.5s;
+
+  -webkit-box-shadow: 3px 5px 30px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 5px 30px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 5px 30px 1px rgba(0, 0, 0, 0.75);
 
   header {
     display: grid;
@@ -28,13 +32,13 @@
 
     border-radius: 15px 15px 0px 0px;
     background: var(--color1);
-    
+
     span {
       display: flex;
       justify-self: end;
       font-weight: 500;
       font-size: 1rem;
-      color: #E8E8E8;
+      color: #e8e8e8;
     }
   }
 
@@ -67,8 +71,8 @@
   right: 0;
   justify-self: flex-end;
   align-items: center;
-  gap: .25rem;
-  
+  gap: 0.25rem;
+
   button {
     background: none;
     border: none;
@@ -79,10 +83,10 @@
 
     cursor: pointer;
 
-    transition: all .2s;
+    transition: all 0.2s;
 
     &:hover {
-      filter: brightness(.9);
+      filter: brightness(0.9);
     }
   }
 }
