@@ -6,10 +6,7 @@ import styles from "./window.module.scss";
 
 export function Window({ name, windowIndex, children }: IWindowProps) {
   const { openTheWindow, windowZIndex } = useWindow();
-
   const [max, setMax] = useState(false);
-
-  console.log(windowZIndex[windowIndex]);
 
   return (
     <div

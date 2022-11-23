@@ -19,7 +19,7 @@ export default function TalkToMeScreen() {
           title="Linkedin"
           description="matheus-p-agostinho"
           url="https://www.linkedin.com/in/matheus-p-agostinho/"
-          imageUrl="/icons/contacts/linkedin.ong"
+          imageUrl="/icons/contacts/linkedin.png"
           imageAlt="Logo da rede social Linkedin, um quadrado com borda arrendondada na cor azul,
           com letras i n em cor branca no meio"
         />

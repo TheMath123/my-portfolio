@@ -12,6 +12,7 @@ export interface IOpenWindowContextProps {
   openWindows: boolean[];
   openTheWindow: (index: number, open: boolean) => void;
   windowZIndex: number[];
+  orderTask: number[];
 }
 
 // <------------------------------------------>
