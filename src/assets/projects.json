@@ -4,7 +4,7 @@
     "description": "Gerador um link para iniciar um conversa no WhatsApp a partir de um número de telefone.",
     "image": {
       "alt": "Logo da Aplicação do StartMessage, um bolãozinho de conversa verde com telefone na cor branco dentro.",
-      "url": "https://firebasestorage.googleapis.com/v0/b/matheuspa-projects.appspot.com/o/my-portfolio%2Ficons%2Fwhatsapp.png?alt=media&token=2247e103-d938-4ca2-a064-56b7c2704dd2"
+      "url": "/icons/projects/whatsapp.png"
     },
     "repository": {
       "demoURL": "https://startmessage.vercel.app/",
@@ -88,7 +88,7 @@
     "description": "Reconstrução visual da tela de um software, que realiza edição e cadastra novos funcionários.",
     "image": {
       "alt": "Folha de papel com pequena foto de personagem, em alguns risco simbolizando algo escrito, e também um certo em verde no canto inferior direito.",
-      "url": "https://firebasestorage.googleapis.com/v0/b/matheuspa-projects.appspot.com/o/my-portfolio%2Ficons%2Fprofile.png?alt=media&token=71d8375b-247e-4d0f-ab09-573b551f8a2c"
+      "url": "/icons/projects/profile.png"
     },
     "repository": {
       "demoURL": "https://cadastro-funcionario.vercel.app/",

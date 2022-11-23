@@ -3,8 +3,7 @@ import { Window } from "../../components/window";
 import styles from "./AboutMe.module.scss";
 
 export default function AboutMeScreen() {
-  const image =
-    "https://firebasestorage.googleapis.com/v0/b/matheuspa-projects.appspot.com/o/my-portfolio%2Fothers%2FmyPhoto2.jpg?alt=media&token=6fff295f-68a5-4d11-844f-aa120b8576bd";
+  const image = "/images/myPhoto2.jpg";
   return (
     <Window name="Sobre o Matheus" windowIndex={0}>
       <div className={styles.container}>

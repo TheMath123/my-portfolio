@@ -1,9 +1,11 @@
 import Image from "next/image";
+import { useWindow } from "../../hooks/useControlWindow";
 import { Anchor } from "../Anchor";
 import { Clock } from "../clock";
 import styles from "./taskbar.module.scss";
 
 export function Taskbar() {
+  const { openWindows } = useWindow();
   return (
     <div className={styles.taskbar}>
       <div className={styles.icons}>
@@ -34,6 +36,19 @@ export function Taskbar() {
             height={30}
           />
         </Anchor>
+
+        {openWindows[0] && (
+          <button title="Doors">
+            <Image
+              src="/icons/taskbar/door.svg"
+              alt="Icone de uma porta na cor branca."
+              width={27}
+              height={27}
+            />
+          </button>
+        )}
+        {openWindows[1] && <div />}
+        {openWindows[2] && <div />}
       </div>
       <div className={styles.info}>
         <select name="Language" id="1">
