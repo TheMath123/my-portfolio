@@ -38,7 +38,7 @@ class MyDocument extends Document {
           />
           <meta name="msapplication-TileColor" content="#ffffff" />
           <meta name="theme-color" content="#ffffff" />
-          <title>Matheus Portfolio</title>
+          <title>Matheus Agostinho - Portfolio</title>
         </Head>
         <body>
           <Main />
