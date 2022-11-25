@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-title-in-document-head */
 import Document, { DocumentContext, DocumentInitialProps, Head, Html, Main, NextScript } from "next/document";
 
 class MyDocument extends Document {
@@ -37,6 +38,7 @@ class MyDocument extends Document {
           />
           <meta name="msapplication-TileColor" content="#ffffff" />
           <meta name="theme-color" content="#ffffff" />
+          <title>Matheus Portfolio</title>
         </Head>
         <body>
           <Main />
