@@ -4,6 +4,54 @@
     "description": "Gerador um link para iniciar um conversa no WhatsApp a partir de um número de telefone.",
     "image": {
       "alt": "Logo da Aplicação do StartMessage, um bolãozinho de conversa verde com telefone na cor branco dentro.",
+      "url": "/icons/projects/inside-logo.svg"
+    },
+    "repository": {
+      "demoURL": "https://insideprod.com.br",
+      "projectURL": "https://github.com/TheMath123"
+    },
+    "techs": [
+      {
+        "color": "ts",
+        "title": "Typescript"
+      },
+      {
+        "color": "html",
+        "title": "HTML"
+      },
+      {
+        "color": "react",
+        "title": "React"
+      },
+      {
+        "color": "vite",
+        "title": "Vite"
+      },
+      {
+        "color": "css",
+        "title": "SASS"
+      }
+    ],
+    "concepts": [
+      {
+        "color": "ux",
+        "title": "UX"
+      },
+      {
+        "color": "mobile",
+        "title": "Mobile First"
+      },
+      {
+        "color": "responsiveness",
+        "title": "Responsividade"
+      }
+    ]
+  },
+  {
+    "title": "Start Message",
+    "description": "Gerador um link para iniciar um conversa no WhatsApp a partir de um número de telefone.",
+    "image": {
+      "alt": "Logo da Aplicação do StartMessage, um bolãozinho de conversa verde com telefone na cor branco dentro.",
       "url": "/icons/projects/whatsapp.png"
     },
     "repository": {
