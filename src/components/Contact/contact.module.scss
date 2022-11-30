@@ -31,5 +31,19 @@
     a {
       cursor: pointer;
     }
+
+    .link {
+      cursor: pointer;
+
+      transition: all 0.3s;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &:active {
+        transform: scale(0.9);
+      }
+    }
   }
 }

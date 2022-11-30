@@ -5,11 +5,11 @@ type ButtonProps = {
   url?: string;
   title: string;
   onClick?: () => void;
+  className?: string;
   children: React.ReactNode;
 };
 
-export function Anchor({url, title, onClick, children}: ButtonProps) {
-
+export function Anchor({ url, title, onClick, children, className }: ButtonProps) {
   function copy() {
     navigator.clipboard.writeText(title);
     toast("Texto copiado!", {
@@ -35,7 +35,11 @@ export function Anchor({url, title, onClick, children}: ButtonProps) {
   }
 
   return (
-    <button className={styles.button} onClick={handlerOnClick} title={title}>
+    <button
+      className={className ?? styles.button}
+      onClick={handlerOnClick}
+      title={title}
+    >
       {children}
     </button>
   );

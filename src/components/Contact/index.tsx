@@ -24,6 +24,7 @@ export function Contact(props: ContactProps) {
       <div className={styles.infos}>
         <h1>{props.title}</h1>
         <Anchor
+          className={styles.link}
           url={props.url}
           title={props.description}
         >
