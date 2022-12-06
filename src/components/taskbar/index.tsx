@@ -47,7 +47,7 @@ export function Taskbar() {
             height={27}
           />
         </button>
-        <Anchor url="https://hitext.vercel.app/" title="Aplicação do HiText">
+        <Anchor url="https://hitext.vercel.app" title="Aplicação do HiText">
           <Image
             src="/icons/taskbar/hitext.svg"
             alt="Logo da Aplicação do HiText, um circulo branco com letra H e T dentro na cor preta."
@@ -56,7 +56,7 @@ export function Taskbar() {
           />
         </Anchor>
         <Anchor
-          url="https://startmessage.vercel.app/"
+          url="https://startmessage.matheuspa.me"
           title="Aplicação do StartMessage"
         >
           <Image
