@@ -12,6 +12,7 @@ export interface IOpenWindowContextProps {
   stateWindows: boolean[];
   toggleStateWindow: (index: number, open: boolean) => void;
   minimizeWindow: (index: number) => void;
+  focusWindow: (index: number) => void;
   windowZIndex: number[];
   orderTask: number[];
 }

@@ -7,7 +7,7 @@ import styles from "./window.module.scss";
 
 export function Window({ name, windowIndex, children }: IWindowProps) {
   const { containerRef } = useWindow();
-  const { toggleStateWindow, windowZIndex, minimizeWindow } = useWindowControl();
+  const { toggleStateWindow, windowZIndex, minimizeWindow, focusWindow } = useWindowControl();
   const [max, setMax] = useState(false);
 
   // Move window
@@ -84,6 +84,10 @@ export function Window({ name, windowIndex, children }: IWindowProps) {
     return cleanup;
   }, []);
 
+  const handlerClickWindow = () => {
+    focusWindow(windowIndex);
+  };
+
   return (
     <div
       ref={windowRef}
@@ -91,6 +95,7 @@ export function Window({ name, windowIndex, children }: IWindowProps) {
       title={name}
       className={`${styles.container} ${max && styles.max}`}
       style={{ zIndex: windowZIndex[windowIndex] }}
+      onClick={() => handlerClickWindow()}
     >
       <header ref={headerRef}>
         <span className={styles.title}>{name}</span>

@@ -15,7 +15,7 @@ export function OpenWindowProvider({ children }: IChildrenProps) {
     // Ao abrir janelas ou clicar novamente nelas
     if (stateWindows[windowsIndex]) {
       // Verifica se index aberto foi chamado, caso chamado coloca em 1º plano
-      updateWindowZIndex(windowZIndex.map((value, index) => (index === windowsIndex ? 999 : 100)));
+      updateWindowZIndex(windowZIndex.map((_, index) => (index === windowsIndex ? 999 : 100)));
     }
 
     // Orden de janelas
@@ -27,6 +27,10 @@ export function OpenWindowProvider({ children }: IChildrenProps) {
 
     // Alterna entre fechar e abrir a janela
     setOpenWindows(stateWindows.map((value, index) => (index === windowsIndex ? open : value)));
+  }
+
+  function focusWindow(windowsIndex: number) {
+    updateWindowZIndex(windowZIndex.map((_, index) => (index === windowsIndex ? 999 : 100)));
   }
 
   // Adiciona uma janela a uma lista de ordem
@@ -60,6 +64,7 @@ export function OpenWindowProvider({ children }: IChildrenProps) {
         stateWindows,
         toggleStateWindow,
         minimizeWindow,
+        focusWindow,
         windowZIndex,
         orderTask,
       }}
