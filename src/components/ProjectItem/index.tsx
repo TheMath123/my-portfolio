@@ -3,14 +3,7 @@ import { IComponentProjectProps } from "../../@types";
 import { Anchor, Badge } from "..";
 import styles from "./project.module.scss";
 
-export function ProjectItem({
-  image,
-  description,
-  title,
-  techs,
-  concepts,
-  repository
-}: IComponentProjectProps) {
+export function ProjectItem({ image, description, title, techs, concepts, repository }: IComponentProjectProps) {
   return (
     <div className={styles.container}>
       <div className={styles.contentImage}>
@@ -27,30 +20,16 @@ export function ProjectItem({
           <div className={styles.technologies}>
             <h2>Tecnologias Usadas</h2>
             <ul>
-              {techs.map((value, index) => {
-                return (
-                  <Badge
-                    key={index}
-                    title={value.title}
-                    color={value.color}
-                    url={value.url}
-                  />
-                );
+              {techs?.map((value, index) => {
+                return <Badge key={index} title={value.title} color={value.color} url={value.url} />;
               })}
             </ul>
           </div>
           <div className={styles.technologies}>
             <h2>Conceitos utilizados</h2>
             <ul>
-              {concepts.map((value, index) => {
-                return (
-                  <Badge
-                    key={index}
-                    title={value.title}
-                    color={value.color}
-                    url={value.url}
-                  />
-                );
+              {concepts?.map((value, index) => {
+                return <Badge key={index} title={value.title} color={value.color} url={value.url} />;
               })}
             </ul>
           </div>
