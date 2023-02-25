@@ -40,7 +40,6 @@ export function OpenWindowProvider({ children }: IChildrenProps) {
   // Adiciona uma janela a uma lista de ordem
   function addToOrder(windowsIndex: number) {
     if (!orderTask.includes(windowsIndex)) {
-      console.log('adicionei');
       let newArray = [...orderTask, windowsIndex];
       setOrderTask(newArray);
     }

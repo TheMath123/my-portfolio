@@ -33,21 +33,30 @@ export function Window({ name, windowIndex, children }: IWindowProps) {
 
     const box = windowRef.current;
     const container = containerRef.current;
+    const header = headerRef.current;
 
     const onMouseDown = (e: MouseEvent) => {
+      e.preventDefault();
+
       isClicked.current = true;
       coords.current.startX = e.clientX;
       coords.current.startY = e.clientY;
     };
 
     const onMouseUp = (e: MouseEvent) => {
+      e.preventDefault();
+
       isClicked.current = false;
       coords.current.lastX = box.offsetLeft;
       coords.current.lastY = box.offsetTop;
     };
 
     const onMouseMove = (e: MouseEvent) => {
+      e.preventDefault();
+
       if (!isClicked.current) return;
+
+      if (!header.contains(e.target as Node)) return;
 
       const nextX = e.clientX - coords.current.startX + coords.current.lastX;
       const nextY = e.clientY - coords.current.startY + coords.current.lastY;
@@ -77,7 +86,7 @@ export function Window({ name, windowIndex, children }: IWindowProps) {
       data-message={name}
       title={name}
       className={`${styles.container} ${max && styles.max}`}
-      style={{ zIndex: `${windowZIndex[windowIndex]} !important` }}
+      style={{ zIndex: windowZIndex[windowIndex] }}
     >
       <header ref={headerRef}>
         <span className={styles.title}>{name}</span>

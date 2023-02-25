@@ -14,9 +14,9 @@ export default function Home() {
   const { containerRef } = useWindow();
 
   return (
-    <div className={styles.workspace} ref={containerRef}>
+    <div className={styles.workspace}>
       <Toaster />
-      <main className={styles.desktop}>
+      <main className={styles.desktop} ref={containerRef}>
         <Icon
           name="Sobre o Matheus"
           alt="Personagem de cor de pele (um rosinha claro), de olhos preto, e com sorrisinho."
