@@ -1,8 +1,6 @@
 import { useState } from "react";
 import Image from "next/image";
-import { ProjectItem } from "../../components/ProjectItem";
-import { Window } from "../../components/window";
-import { Anchor } from "../../components/Anchor";
+import { ProjectItem, Anchor, Window } from "../../components";
 import projectsList from "../../assets/projects.json";
 import styles from "./ProjectScreen.module.scss";
 

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Anchor } from "../Anchor";
+import { Anchor } from "..";
 import styles from "./contact.module.scss";
 
 type ContactProps = {

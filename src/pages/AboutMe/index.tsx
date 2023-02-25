@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { Window } from "../../components/window";
+import { Window } from "../../components";
 import styles from "./AboutMe.module.scss";
 
 export default function AboutMeScreen() {

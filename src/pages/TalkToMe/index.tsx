@@ -1,6 +1,4 @@
-
-import { Window } from "../../components/window";
-import { Contact } from "../../components/Contact";
+import { Contact, Window } from "../../components";
 import styles from "./TalkToMe.module.scss";
 
 export default function TalkToMeScreen() {

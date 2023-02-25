@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { IComponentProjectProps } from "../../@types";
-import { Anchor } from "../Anchor";
-import { Badge } from "../Badge";
+import { Anchor, Badge } from "..";
 import styles from "./project.module.scss";
 
 export function ProjectItem({
