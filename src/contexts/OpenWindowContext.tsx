@@ -22,7 +22,7 @@ export function OpenWindowProvider({ children }: IChildrenProps) {
     if (stateWindows[windowsIndex]) {
       // Verifica se index aberto foi chamado, caso chamado coloca em 1º plano
       updateWindowZIndex(
-        windowZIndex.map((value, index) => (index === windowsIndex ? 110 : 100))
+        windowZIndex.map((value, index) => (index === windowsIndex ? 999 : 100))
       );
     }
 
@@ -51,6 +51,10 @@ export function OpenWindowProvider({ children }: IChildrenProps) {
 
   // Remove uma janela a uma lista de ordem
   function removeOfOrder(windowsIndex: number) {
+    updateWindowZIndex(
+      windowZIndex.map((value, index) => (index === windowsIndex ? 100 : 100))
+    );
+
     let newArray = orderTask.map((element) => {
       if (element !== windowsIndex) {
         return element;

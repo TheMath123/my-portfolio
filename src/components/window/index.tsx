@@ -14,9 +14,14 @@ export function Window({ name, windowIndex, children }: IWindowProps) {
   // Move window
   const windowRef = useRef<HTMLDivElement>(null);
   const headerRef = useRef<HTMLDivElement>(null);
-  const buttonsRef = useRef<HTMLButtonElement>(null);
+  const buttonsRef = useRef<HTMLDivElement>(null);
 
   const isClicked = useRef<boolean>(false);
+
+  console.log(containerRef.current.getBoundingClientRect());
+
+  const startValueX = containerRef.current.getBoundingClientRect().width / 10;
+  const startValueY = containerRef.current.getBoundingClientRect().height / 10;
 
   const coords = useRef<{
     startX: number;
@@ -24,10 +29,10 @@ export function Window({ name, windowIndex, children }: IWindowProps) {
     lastX: number;
     lastY: number;
   }>({
-    startX: 0,
-    startY: 0,
-    lastX: 0,
-    lastY: 0
+    startX: startValueX,
+    startY: startValueY,
+    lastX: startValueX,
+    lastY: startValueY
   });
 
   useEffect(() => {
@@ -40,10 +45,9 @@ export function Window({ name, windowIndex, children }: IWindowProps) {
 
     const onMouseDown = (e: MouseEvent) => {
       e.preventDefault();
-
       if (
         !header.contains(e.target as Node) ||
-        !buttons.contains(e.target as Node)
+        buttons.contains(e.target as Node)
       )
         return;
 
@@ -97,10 +101,9 @@ export function Window({ name, windowIndex, children }: IWindowProps) {
     >
       <header ref={headerRef}>
         <span className={styles.title}>{name}</span>
-        <div className={styles.btnsWindow}>
+        <div ref={buttonsRef} className={styles.btnsWindow}>
           <button
             disabled={isClicked.current}
-            ref={buttonsRef}
             className={styles.minimize}
             onClick={() => minimizeWindow(windowIndex)}
           >
@@ -114,7 +117,6 @@ export function Window({ name, windowIndex, children }: IWindowProps) {
 
           <button
             disabled={isClicked.current}
-            ref={buttonsRef}
             className={styles.maximize}
             onClick={() => (max ? setMax(false) : setMax(true))}
           >
@@ -136,7 +138,6 @@ export function Window({ name, windowIndex, children }: IWindowProps) {
           </button>
 
           <button
-            ref={buttonsRef}
             disabled={isClicked.current}
             className={styles.close}
             onClick={() => toggleStateWindow(windowIndex, false)}

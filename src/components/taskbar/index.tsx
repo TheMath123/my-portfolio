@@ -5,12 +5,12 @@ import { Clock } from "../clock";
 import styles from "./taskbar.module.scss";
 
 export function Taskbar() {
-  const { openTheWindow, orderTask } = useWindowControl();
+  const { toggleStateWindow, orderTask } = useWindowControl();
   const itens = [
     <Anchor
       key={0}
       title="Sobre o Matheus"
-      onClick={() => openTheWindow(0, true)}
+      onClick={() => toggleStateWindow(0, true)}
     >
       <Image
         src="/icons/desktop/about-me.png"
@@ -19,7 +19,7 @@ export function Taskbar() {
         height={27}
       />
     </Anchor>,
-    <Anchor key={1} title="Projetos" onClick={() => openTheWindow(1, true)}>
+    <Anchor key={1} title="Projetos" onClick={() => toggleStateWindow(1, true)}>
       <Image
         src="/icons/desktop/files.svg"
         alt="Caderno marron, com um etiqueta branca na capa, e com marcadores de pagina coloridos."
@@ -27,7 +27,11 @@ export function Taskbar() {
         height={27}
       />
     </Anchor>,
-    <Anchor key={2} title="Fale Comigo" onClick={() => openTheWindow(2, true)}>
+    <Anchor
+      key={2}
+      title="Fale Comigo"
+      onClick={() => toggleStateWindow(2, true)}
+    >
       <Image
         src="/icons/desktop/call.svg"
         alt="Um balão de conversar amarelo com rostinho dentro, saindo de um ícone de telefone na cor vermelha."
