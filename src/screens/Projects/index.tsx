@@ -4,7 +4,7 @@ import { ProjectItem, Anchor, Window } from "../../components";
 import projectsList from "../../assets/projects.json";
 import styles from "./ProjectScreen.module.scss";
 
-export default function ProjectScreen() {
+export function ProjectScreen() {
   const [projects] = useState(projectsList);
 
   return (
@@ -35,15 +35,9 @@ export default function ProjectScreen() {
         </div>
         <div className={styles.descOtherProjects}>
           <h1>Demais projetos</h1>
-          <p>
-            Para ver outros projetos ainda em desenvolvimento, acesse meu perfil
-            no github.
-          </p>
+          <p>Para ver outros projetos ainda em desenvolvimento, acesse meu perfil no github.</p>
         </div>
-        <Anchor
-          title="Acessar perfil no Github"
-          url="https://github.com/TheMath123"
-        >
+        <Anchor title="Acessar perfil no Github" url="https://github.com/TheMath123">
           <Image
             layout="fixed"
             src="/icons/projects/airplane.png"

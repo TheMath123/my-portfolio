@@ -1,7 +1,7 @@
 import { Contact, Window } from "../../components";
 import styles from "./TalkToMe.module.scss";
 
-export default function TalkToMeScreen() {
+export function TalkToMeScreen() {
   return (
     <Window name="Fale comigo" windowIndex={2}>
       <div className={styles.container}>

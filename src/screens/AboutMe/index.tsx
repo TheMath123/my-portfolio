@@ -2,7 +2,7 @@
 import { Window } from "../../components";
 import styles from "./AboutMe.module.scss";
 
-export default function AboutMeScreen() {
+export function AboutMeScreen() {
   const image = "/images/myPhoto2.jpg";
   return (
     <Window name="Sobre o Matheus" windowIndex={0}>
@@ -19,15 +19,11 @@ export default function AboutMeScreen() {
             <div>
               <h3>Sobre</h3>
               <p>
-                Sou desenvolvedor de software júnior e entusiasta de tecnologia,
-                utilizo da programação para resolver problemas. Minha jornada
-                começou quando ganhei meu primeiro computador, a partir desse
-                momento fiquei fascinado por esse mundo e aprendi de forma
-                autodidata um pouco tudo de cada área, influenciando-me a
-                escolher o Bacharelado em Sistemas de Informação, que me deu
-                embasamento teórico que ajudam ao longo da minha carreira.
-                Sempre aprimorando minhas habilidades como desenvolvedor de
-                software.
+                Sou desenvolvedor de software júnior e entusiasta de tecnologia, utilizo da programação para resolver
+                problemas. Minha jornada começou quando ganhei meu primeiro computador, a partir desse momento fiquei
+                fascinado por esse mundo e aprendi de forma autodidata um pouco tudo de cada área, influenciando-me a
+                escolher o Bacharelado em Sistemas de Informação, que me deu embasamento teórico que ajudam ao longo da
+                minha carreira. Sempre aprimorando minhas habilidades como desenvolvedor de software.
               </p>
             </div>
             <div>

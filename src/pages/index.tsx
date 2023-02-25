@@ -1,12 +1,9 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { Toaster } from "react-hot-toast";
 import { useWindow, useWindowControl } from "../hooks";
+import { AboutMeScreen, ProjectScreen, TalkToMeScreen } from "../screens";
 import { Loading, Taskbar, Icon } from "../components";
-
-import ProjectScreen from "./Projects";
-import AboutMeScreen from "./AboutMe";
-import TalkToMeScreen from "./TalkToMe";
 
 import styles from "./home.module.scss";
 
@@ -17,9 +14,7 @@ export default function Home() {
   const { containerRef } = useWindow();
 
   useEffect(() => {
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(
-      window.navigator.userAgent
-    );
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(window.navigator.userAgent);
 
     if (isMobile) {
       setIsMobile(isMobile);
