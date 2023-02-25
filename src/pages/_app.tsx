@@ -1,12 +1,12 @@
-import { OpenWindowProvider, WindowContextProvider } from "../contexts";
+import { ToggleWindowProvider, WindowContextProvider } from "../contexts";
 import "../styles/globals.scss";
 
 function MyApp({ Component, pageProps }: any) {
   return (
     <WindowContextProvider>
-      <OpenWindowProvider>
+      <ToggleWindowProvider>
         <Component {...pageProps} />
-      </OpenWindowProvider>
+      </ToggleWindowProvider>
     </WindowContextProvider>
   );
 }

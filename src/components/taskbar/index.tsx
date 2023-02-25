@@ -1,56 +1,22 @@
+import { useState } from "react";
 import Image from "next/image";
 import { Anchor, Clock } from "..";
 import { useWindowControl } from "../../hooks";
+
+import iconsAssets from "../../assets/icons.json";
 import styles from "./taskbar.module.scss";
 
 export function Taskbar() {
+  const [icons] = useState(iconsAssets);
   const { toggleStateWindow, orderTask } = useWindowControl();
-  const itens = [
-    <Anchor
-      key={0}
-      title="Sobre o Matheus"
-      onClick={() => toggleStateWindow(0, true)}
-    >
-      <Image
-        src="/icons/desktop/about-me.png"
-        alt="Personagem de cor de pele (um rosinha claro), de olhos preto, e com sorrisinho."
-        width={27}
-        height={27}
-      />
-    </Anchor>,
-    <Anchor key={1} title="Projetos" onClick={() => toggleStateWindow(1, true)}>
-      <Image
-        src="/icons/desktop/files.svg"
-        alt="Caderno marron, com um etiqueta branca na capa, e com marcadores de pagina coloridos."
-        width={27}
-        height={27}
-      />
-    </Anchor>,
-    <Anchor
-      key={2}
-      title="Fale Comigo"
-      onClick={() => toggleStateWindow(2, true)}
-    >
-      <Image
-        src="/icons/desktop/call.svg"
-        alt="Um balão de conversar amarelo com rostinho dentro, saindo de um ícone de telefone na cor vermelha."
-        width={27}
-        height={27}
-      />
-    </Anchor>
-  ];
 
   return (
     <div className={styles.taskbar}>
       <div className={styles.icons}>
         <button title="Doors">
-          <Image
-            src="/icons/taskbar/door.svg"
-            alt="Icone de uma porta na cor branca."
-            width={27}
-            height={27}
-          />
+          <Image src="/icons/taskbar/door.svg" alt="Icone de uma porta na cor branca." width={27} height={27} />
         </button>
+
         <Anchor url="https://hitext.vercel.app" title="Aplicação do HiText">
           <Image
             src="/icons/taskbar/hitext.svg"
@@ -59,10 +25,8 @@ export function Taskbar() {
             height={27}
           />
         </Anchor>
-        <Anchor
-          url="https://startmessage.matheuspa.me"
-          title="Aplicação do StartMessage"
-        >
+
+        <Anchor url="https://startmessage.matheuspa.me" title="Aplicação do StartMessage">
           <Image
             src="/icons/projects/whatsapp.png"
             alt="Logo da Aplicação do StartMessage, um bolãozinho de conversa verde com telefone na cor branco dentro."
@@ -71,7 +35,11 @@ export function Taskbar() {
           />
         </Anchor>
 
-        {orderTask.map((value) => itens[value])}
+        {orderTask.map((value, index) => (
+          <Anchor key={`icon-${index}`} title={icons[value].title} onClick={() => toggleStateWindow(value, true)}>
+            <Image src={icons[value].image.path} alt={icons[value].image.alt} width={27} height={27} />
+          </Anchor>
+        ))}
       </div>
       <div className={styles.info}>
         <select name="Language" id="1">

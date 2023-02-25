@@ -7,7 +7,7 @@ export interface IChildrenProps {
 
 // <------------------------------------------>
 
-export interface IOpenWindowContextProps {
+export interface IToggleWindowContextProps {
   //Context Props
   stateWindows: boolean[];
   toggleStateWindow: (index: number, open: boolean) => void;

@@ -1,7 +1,7 @@
 import { useContext } from "react";
 
-import { OpenWindowContext } from "../contexts/OpenWindowContext";
+import { ToggleWindowContext } from "../contexts/ToggleWindowContext";
 
 export function useWindowControl() {
-  return useContext(OpenWindowContext);
+  return useContext(ToggleWindowContext);
 }

@@ -1,2 +1,2 @@
-export * from "./OpenWindowContext";
+export * from "./ToggleWindowContext";
 export * from "./WindowContext";

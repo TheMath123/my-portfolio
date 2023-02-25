@@ -1,10 +1,10 @@
-import { createContext, useState } from "react";
-import { IChildrenProps, IOpenWindowContextProps } from "../@types";
+import { createContext, useEffect, useState } from "react";
+import { IChildrenProps, IToggleWindowContextProps } from "../@types";
 
-export const OpenWindowContext = createContext({} as IOpenWindowContextProps);
+export const ToggleWindowContext = createContext({} as IToggleWindowContextProps);
 
-export function OpenWindowProvider({ children }: IChildrenProps) {
-  // 0 - About-me | 1 - Projects | 2 - Talk-me
+export function ToggleWindowProvider({ children }: IChildrenProps) {
+  // 0 = About-me | 1 = Projects | 2 = Talk-me
   const [stateWindows, setOpenWindows] = useState<boolean[]>([false, false, false]);
 
   const [windowZIndex, updateWindowZIndex] = useState<number[]>([100, 100, 100]);
@@ -43,13 +43,9 @@ export function OpenWindowProvider({ children }: IChildrenProps) {
 
   // Remove uma janela a uma lista de ordem
   function removeOfOrder(windowsIndex: number) {
-    updateWindowZIndex(windowZIndex.map((value, index) => (index === windowsIndex ? 100 : 100)));
+    updateWindowZIndex(windowZIndex.map((_, index) => (index === windowsIndex ? 100 : 100)));
 
-    let newArray = orderTask.filter((element) => {
-      if (element !== windowsIndex) {
-        return element;
-      }
-    });
+    let newArray = orderTask.filter((element) => element !== windowsIndex);
 
     setOrderTask(newArray); // usa a função setState com o valor anterior
   }
@@ -59,7 +55,7 @@ export function OpenWindowProvider({ children }: IChildrenProps) {
   }
 
   return (
-    <OpenWindowContext.Provider
+    <ToggleWindowContext.Provider
       value={{
         stateWindows,
         toggleStateWindow,
@@ -70,6 +66,6 @@ export function OpenWindowProvider({ children }: IChildrenProps) {
       }}
     >
       {children}
-    </OpenWindowContext.Provider>
+    </ToggleWindowContext.Provider>
   );
 }
