@@ -1,11 +1,13 @@
+import { OpenWindowProvider, WindowContextProvider } from "../contexts";
 import "../styles/globals.scss";
-import { OpenWindowProvider } from "../contexts/OpenWindowContext";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <OpenWindowProvider>
-      <Component {...pageProps} />
-    </OpenWindowProvider>
+    <WindowContextProvider>
+      <OpenWindowProvider>
+        <Component {...pageProps} />
+      </OpenWindowProvider>
+    </WindowContextProvider>
   );
 }
 

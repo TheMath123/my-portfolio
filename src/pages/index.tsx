@@ -1,5 +1,4 @@
 import { Toaster } from "react-hot-toast";
-import { useWindow } from "../hooks/useControlWindow";
 import { Taskbar } from "../components/taskbar";
 import { Icon } from "../components/icon";
 
@@ -8,12 +7,14 @@ import AboutMeScreen from "./AboutMe/AboutMeScreen";
 import TalkToMeScreen from "./TalkToMe/TalkToMeScreen";
 
 import styles from "./home.module.scss";
+import { useWindow, useWindowControl } from "../hooks";
 
 export default function Home() {
-  const { openWindows, openTheWindow } = useWindow();
+  const { openWindows, openTheWindow } = useWindowControl();
+  const { containerRef } = useWindow();
 
   return (
-    <div className={styles.workspace}>
+    <div className={styles.workspace} ref={containerRef}>
       <Toaster />
       <main className={styles.desktop}>
         <Icon

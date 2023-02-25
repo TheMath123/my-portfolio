@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 * {
   padding: 0;
@@ -10,27 +10,27 @@
   //Colors
   --color1: #262626;
   --color2: #35363a;
-  
+
   //Gradients
-  --gradient: linear-gradient(180deg, #E8E8E8 0%, #CFCFCF 100%);
+  --gradient: linear-gradient(180deg, #e8e8e8 0%, #cfcfcf 100%);
   --gradient2: linear-gradient(168.51deg, #353635 8%, #313236 92.26%);
-  
+
   //Box Shadows Templates
-  --shadowColor: #C4C4C4;
+  --shadowColor: #c4c4c4;
   --shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.25);
 
   //Colors Badge
-  --js: #F7BA1E;
-  --html: #E54D26;
-  --css: #379AD5;
-  --ts: #1E8FF7;
-  --react: #F7861E;
-  --vite: #ADD900;
-  --sass: #FF78B1;
-  --ux: #BF1EF7;
-  --mobile: #E52626;
-  --responsiveness: #3776D5;
-  --gdesign: #C8D537;
+  --js: #f7ba1e;
+  --html: #e54d26;
+  --css: #379ad5;
+  --ts: #1e8ff7;
+  --react: #f7861e;
+  --vite: #add900;
+  --sass: #ff78b1;
+  --ux: #bf1ef7;
+  --mobile: #e52626;
+  --responsiveness: #3776d5;
+  --gdesign: #c8d537;
 }
 
 body {
@@ -39,6 +39,7 @@ body {
   font-family: Roboto, sans-serif;
   font-weight: 400;
   background: #4b4b4b; //color unique
+  overflow: hidden;
 }
 
 a {
@@ -47,26 +48,30 @@ a {
   font-family: Roboto, sans-serif;
   font-weight: 400;
 
-  transition: filter .3s;
+  transition: filter 0.3s;
   &:hover {
-    filter: brightness(.7);
+    filter: brightness(0.7);
   }
 }
 
-::-webkit-scrollbar { // Barra de rolagem
+::-webkit-scrollbar {
+  // Barra de rolagem
   background: none;
   width: 10px;
 }
 
-::-webkit-scrollbar-thumb { //Barra de rolagem
+::-webkit-scrollbar-thumb {
+  //Barra de rolagem
   background: var(--color1);
   border-radius: 15px;
 }
 
-::-webkit-scrollbar-button { //Botões de navegação nos cantos inferior da barra.
+::-webkit-scrollbar-button {
+  //Botões de navegação nos cantos inferior da barra.
   background: none;
 }
 
-::-webkit-scrollbar-corner { //Botão no canto inferior direito.
+::-webkit-scrollbar-corner {
+  //Botão no canto inferior direito.
   background: none;
 }

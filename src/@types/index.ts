@@ -36,22 +36,29 @@ export interface IWindowProps {
 
 // <------------------------------------------>
 
+export interface IWindowContextProps {
+  //Component Window
+  containerRef: React.MutableRefObject<HTMLDivElement>;
+}
+
+// <------------------------------------------>
+
 //Project Component
 type Image = {
   url: string;
   alt: string;
-}
+};
 
 type BadgeItem = {
   title: string;
   color: string;
   url?: string;
-}
+};
 
 type Repository = {
   projectURL?: string;
   demoURL?: string;
-}
+};
 
 export interface IComponentProjectProps {
   title: string;

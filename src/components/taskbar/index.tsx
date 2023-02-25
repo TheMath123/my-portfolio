@@ -1,40 +1,41 @@
 import Image from "next/image";
-import { useWindow } from "../../hooks/useControlWindow";
+import { useWindowControl } from "../../hooks";
 import { Anchor } from "../Anchor";
 import { Clock } from "../clock";
 import styles from "./taskbar.module.scss";
 
-
 export function Taskbar() {
-  const { openTheWindow, orderTask } = useWindow();
-  const itens = [(<Anchor
-    key={0}
-    title="Sobre o Matheus"
-    onClick={() => openTheWindow(0, true)}
-  >
-    <Image
-      src="/icons/desktop/about-me.png"
-      alt="Personagem de cor de pele (um rosinha claro), de olhos preto, e com sorrisinho."
-      width={27}
-      height={27}
-    />
-  </Anchor>),
-  (<Anchor key={1} title="Projetos" onClick={() => openTheWindow(1, true)}>
-    <Image
-      src="/icons/desktop/files.svg"
-      alt="Caderno marron, com um etiqueta branca na capa, e com marcadores de pagina coloridos."
-      width={27}
-      height={27}
-    />
-  </Anchor>),
-  (<Anchor key={2} title="Fale Comigo" onClick={() => openTheWindow(2, true)}>
-    <Image
-      src="/icons/desktop/call.svg"
-      alt="Um balão de conversar amarelo com rostinho dentro, saindo de um ícone de telefone na cor vermelha."
-      width={27}
-      height={27}
-    />
-    </Anchor>)];
+  const { openTheWindow, orderTask } = useWindowControl();
+  const itens = [
+    <Anchor
+      key={0}
+      title="Sobre o Matheus"
+      onClick={() => openTheWindow(0, true)}
+    >
+      <Image
+        src="/icons/desktop/about-me.png"
+        alt="Personagem de cor de pele (um rosinha claro), de olhos preto, e com sorrisinho."
+        width={27}
+        height={27}
+      />
+    </Anchor>,
+    <Anchor key={1} title="Projetos" onClick={() => openTheWindow(1, true)}>
+      <Image
+        src="/icons/desktop/files.svg"
+        alt="Caderno marron, com um etiqueta branca na capa, e com marcadores de pagina coloridos."
+        width={27}
+        height={27}
+      />
+    </Anchor>,
+    <Anchor key={2} title="Fale Comigo" onClick={() => openTheWindow(2, true)}>
+      <Image
+        src="/icons/desktop/call.svg"
+        alt="Um balão de conversar amarelo com rostinho dentro, saindo de um ícone de telefone na cor vermelha."
+        width={27}
+        height={27}
+      />
+    </Anchor>
+  ];
 
   return (
     <div className={styles.taskbar}>
@@ -68,7 +69,6 @@ export function Taskbar() {
         </Anchor>
 
         {orderTask.map((value) => itens[value])}
-
       </div>
       <div className={styles.info}>
         <select name="Language" id="1">
