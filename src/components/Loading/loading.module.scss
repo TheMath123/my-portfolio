@@ -1,0 +1,21 @@
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.loadingSpinner {
+  border: 0.6rem solid #2525256e;
+  border-left-color: #0066e3;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  animation: loadingSpinner 1s linear infinite;
+}
+
+@keyframes loadingSpinner {
+  to {
+    transform: rotate(360deg);
+  }
+}

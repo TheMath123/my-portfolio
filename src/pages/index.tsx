@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 import { Toaster } from "react-hot-toast";
 import { useWindow, useWindowControl } from "../hooks";
 import { Loading, Taskbar, Icon } from "../components";
@@ -11,6 +12,7 @@ import styles from "./home.module.scss";
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
+  const router = useRouter();
   const { stateWindows, toggleStateWindow } = useWindowControl();
   const { containerRef } = useWindow();
 
@@ -19,13 +21,20 @@ export default function Home() {
       window.navigator.userAgent
     );
 
-    setIsMobile(isMobile);
+    if (isMobile) {
+      setIsMobile(isMobile);
+
+      router.push("https://m.matheuspa.me/");
+    }
+    return;
   }, []);
 
   return (
     <>
       {isMobile ? (
-        <Loading />
+        <div className={styles.workspace}>
+          <Loading />
+        </div>
       ) : (
         <div className={styles.workspace}>
           <Toaster />
