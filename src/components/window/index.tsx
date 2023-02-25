@@ -38,6 +38,8 @@ export function Window({ name, windowIndex, children }: IWindowProps) {
     const onMouseDown = (e: MouseEvent) => {
       e.preventDefault();
 
+      if (!header.contains(e.target as Node)) return;
+
       isClicked.current = true;
       coords.current.startX = e.clientX;
       coords.current.startY = e.clientY;
@@ -55,8 +57,6 @@ export function Window({ name, windowIndex, children }: IWindowProps) {
       e.preventDefault();
 
       if (!isClicked.current) return;
-
-      if (!header.contains(e.target as Node)) return;
 
       const nextX = e.clientX - coords.current.startX + coords.current.lastX;
       const nextY = e.clientY - coords.current.startY + coords.current.lastY;
