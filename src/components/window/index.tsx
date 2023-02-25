@@ -7,12 +7,14 @@ import styles from "./window.module.scss";
 
 export function Window({ name, windowIndex, children }: IWindowProps) {
   const { containerRef } = useWindow();
-  const { openTheWindow, windowZIndex } = useWindowControl();
+  const { toggleStateWindow, windowZIndex, minimizeWindow } =
+    useWindowControl();
   const [max, setMax] = useState(false);
 
   // Move window
   const windowRef = useRef<HTMLDivElement>(null);
   const headerRef = useRef<HTMLDivElement>(null);
+  const buttonsRef = useRef<HTMLButtonElement>(null);
 
   const isClicked = useRef<boolean>(false);
 
@@ -34,11 +36,16 @@ export function Window({ name, windowIndex, children }: IWindowProps) {
     const box = windowRef.current;
     const container = containerRef.current;
     const header = headerRef.current;
+    const buttons = buttonsRef.current;
 
     const onMouseDown = (e: MouseEvent) => {
       e.preventDefault();
 
-      if (!header.contains(e.target as Node)) return;
+      if (
+        !header.contains(e.target as Node) ||
+        !buttons.contains(e.target as Node)
+      )
+        return;
 
       isClicked.current = true;
       coords.current.startX = e.clientX;
@@ -93,8 +100,9 @@ export function Window({ name, windowIndex, children }: IWindowProps) {
         <div className={styles.btnsWindow}>
           <button
             disabled={isClicked.current}
+            ref={buttonsRef}
             className={styles.minimize}
-            onClick={() => {}}
+            onClick={() => minimizeWindow(windowIndex)}
           >
             <Image
               src="/icons/window/minimize.svg"
@@ -106,6 +114,7 @@ export function Window({ name, windowIndex, children }: IWindowProps) {
 
           <button
             disabled={isClicked.current}
+            ref={buttonsRef}
             className={styles.maximize}
             onClick={() => (max ? setMax(false) : setMax(true))}
           >
@@ -127,9 +136,10 @@ export function Window({ name, windowIndex, children }: IWindowProps) {
           </button>
 
           <button
+            ref={buttonsRef}
             disabled={isClicked.current}
             className={styles.close}
-            onClick={() => openTheWindow(windowIndex, false)}
+            onClick={() => toggleStateWindow(windowIndex, false)}
           >
             <Image
               src="/icons/window/close.svg"

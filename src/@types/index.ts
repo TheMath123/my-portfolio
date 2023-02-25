@@ -9,8 +9,9 @@ export interface IChildrenProps {
 
 export interface IOpenWindowContextProps {
   //Context Props
-  openWindows: boolean[];
-  openTheWindow: (index: number, open: boolean) => void;
+  stateWindows: boolean[];
+  toggleStateWindow: (index: number, open: boolean) => void;
+  minimizeWindow: (index: number) => void;
   windowZIndex: number[];
   orderTask: number[];
 }

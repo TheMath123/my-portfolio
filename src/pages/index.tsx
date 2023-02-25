@@ -10,7 +10,7 @@ import styles from "./home.module.scss";
 import { useWindow, useWindowControl } from "../hooks";
 
 export default function Home() {
-  const { openWindows, openTheWindow } = useWindowControl();
+  const { stateWindows, toggleStateWindow } = useWindowControl();
   const { containerRef } = useWindow();
 
   return (
@@ -21,28 +21,28 @@ export default function Home() {
           name="Sobre o Matheus"
           alt="Personagem de cor de pele (um rosinha claro), de olhos preto, e com sorrisinho."
           img="/icons/desktop/about-me.png"
-          commandToOpenWindow={() => openTheWindow(0, true)}
+          commandToOpenWindow={() => toggleStateWindow(0, true)}
         />
         <Icon
           name="Projetos"
           alt="Caderno marron, com um etiqueta branca na capa, e com marcadores de pagina coloridos."
           img="/icons/desktop/files.svg"
-          commandToOpenWindow={() => openTheWindow(1, true)}
+          commandToOpenWindow={() => toggleStateWindow(1, true)}
         />
         <Icon
           name="Fale comigo"
           alt="Um balão de conversar amarelo com rostinho dentro, saindo de um ícone de telefone na cor vermelha."
           img="/icons/desktop/call.svg"
-          commandToOpenWindow={() => openTheWindow(2, true)}
+          commandToOpenWindow={() => toggleStateWindow(2, true)}
         />
 
         {/* <div className={styles.alert}>Em construção 🚧</div> */}
 
-        {openWindows[0] && <AboutMeScreen />}
+        {stateWindows[0] && <AboutMeScreen />}
 
-        {openWindows[1] && <ProjectScreen />}
+        {stateWindows[1] && <ProjectScreen />}
 
-        {openWindows[2] && <TalkToMeScreen />}
+        {stateWindows[2] && <TalkToMeScreen />}
       </main>
 
       <Taskbar />
