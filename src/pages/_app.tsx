@@ -1,7 +1,7 @@
 import { OpenWindowProvider, WindowContextProvider } from "../contexts";
 import "../styles/globals.scss";
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: any) {
   return (
     <WindowContextProvider>
       <OpenWindowProvider>

@@ -5,15 +5,9 @@ export const OpenWindowContext = createContext({} as IOpenWindowContextProps);
 
 export function OpenWindowProvider({ children }: IChildrenProps) {
   // 0 - About-me | 1 - Projects | 2 - Talk-me
-  const [stateWindows, setOpenWindows] = useState<boolean[]>([
-    false,
-    false,
-    false
-  ]);
+  const [stateWindows, setOpenWindows] = useState<boolean[]>([false, false, false]);
 
-  const [windowZIndex, updateWindowZIndex] = useState<number[]>([
-    100, 100, 100
-  ]);
+  const [windowZIndex, updateWindowZIndex] = useState<number[]>([100, 100, 100]);
 
   const [orderTask, setOrderTask] = useState<number[]>([]);
 
@@ -21,9 +15,7 @@ export function OpenWindowProvider({ children }: IChildrenProps) {
     // Ao abrir janelas ou clicar novamente nelas
     if (stateWindows[windowsIndex]) {
       // Verifica se index aberto foi chamado, caso chamado coloca em 1º plano
-      updateWindowZIndex(
-        windowZIndex.map((value, index) => (index === windowsIndex ? 999 : 100))
-      );
+      updateWindowZIndex(windowZIndex.map((value, index) => (index === windowsIndex ? 999 : 100)));
     }
 
     // Orden de janelas
@@ -34,11 +26,7 @@ export function OpenWindowProvider({ children }: IChildrenProps) {
     }
 
     // Alterna entre fechar e abrir a janela
-    setOpenWindows(
-      stateWindows.map((value, index) =>
-        index === windowsIndex ? open : value
-      )
-    );
+    setOpenWindows(stateWindows.map((value, index) => (index === windowsIndex ? open : value)));
   }
 
   // Adiciona uma janela a uma lista de ordem
@@ -51,24 +39,19 @@ export function OpenWindowProvider({ children }: IChildrenProps) {
 
   // Remove uma janela a uma lista de ordem
   function removeOfOrder(windowsIndex: number) {
-    updateWindowZIndex(
-      windowZIndex.map((value, index) => (index === windowsIndex ? 100 : 100))
-    );
+    updateWindowZIndex(windowZIndex.map((value, index) => (index === windowsIndex ? 100 : 100)));
 
-    let newArray = orderTask.map((element) => {
+    let newArray = orderTask.filter((element) => {
       if (element !== windowsIndex) {
         return element;
       }
     });
-    setOrderTask(newArray);
+
+    setOrderTask(newArray); // usa a função setState com o valor anterior
   }
 
   function minimizeWindow(windowsIndex: number) {
-    setOpenWindows(
-      stateWindows.map((value, index) =>
-        index === windowsIndex ? false : value
-      )
-    );
+    setOpenWindows(stateWindows.map((value, index) => (index === windowsIndex ? false : value)));
   }
 
   return (
@@ -78,7 +61,7 @@ export function OpenWindowProvider({ children }: IChildrenProps) {
         toggleStateWindow,
         minimizeWindow,
         windowZIndex,
-        orderTask
+        orderTask,
       }}
     >
       {children}

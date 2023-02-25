@@ -7,8 +7,7 @@ import styles from "./window.module.scss";
 
 export function Window({ name, windowIndex, children }: IWindowProps) {
   const { containerRef } = useWindow();
-  const { toggleStateWindow, windowZIndex, minimizeWindow } =
-    useWindowControl();
+  const { toggleStateWindow, windowZIndex, minimizeWindow } = useWindowControl();
   const [max, setMax] = useState(false);
 
   // Move window
@@ -17,8 +16,6 @@ export function Window({ name, windowIndex, children }: IWindowProps) {
   const buttonsRef = useRef<HTMLDivElement>(null);
 
   const isClicked = useRef<boolean>(false);
-
-  console.log(containerRef.current.getBoundingClientRect());
 
   const startValueX = containerRef.current.getBoundingClientRect().width / 10;
   const startValueY = containerRef.current.getBoundingClientRect().height / 10;
@@ -32,11 +29,11 @@ export function Window({ name, windowIndex, children }: IWindowProps) {
     startX: startValueX,
     startY: startValueY,
     lastX: startValueX,
-    lastY: startValueY
+    lastY: startValueY,
   });
 
   useEffect(() => {
-    if (!windowRef.current || !containerRef.current) return;
+    if (!windowRef.current || !containerRef?.current) return;
 
     const box = windowRef.current;
     const container = containerRef.current;
@@ -45,11 +42,7 @@ export function Window({ name, windowIndex, children }: IWindowProps) {
 
     const onMouseDown = (e: MouseEvent) => {
       e.preventDefault();
-      if (
-        !header.contains(e.target as Node) ||
-        buttons.contains(e.target as Node)
-      )
-        return;
+      if (!header?.contains(e.target as Node) || buttons?.contains(e.target as Node)) return;
 
       isClicked.current = true;
       coords.current.startX = e.clientX;
@@ -102,17 +95,8 @@ export function Window({ name, windowIndex, children }: IWindowProps) {
       <header ref={headerRef}>
         <span className={styles.title}>{name}</span>
         <div ref={buttonsRef} className={styles.btnsWindow}>
-          <button
-            disabled={isClicked.current}
-            className={styles.minimize}
-            onClick={() => minimizeWindow(windowIndex)}
-          >
-            <Image
-              src="/icons/window/minimize.svg"
-              alt="Minimizar janela"
-              width={20}
-              height={20}
-            />
+          <button disabled={isClicked.current} className={styles.minimize} onClick={() => minimizeWindow(windowIndex)}>
+            <Image src="/icons/window/minimize.svg" alt="Minimizar janela" width={20} height={20} />
           </button>
 
           <button
@@ -121,19 +105,9 @@ export function Window({ name, windowIndex, children }: IWindowProps) {
             onClick={() => (max ? setMax(false) : setMax(true))}
           >
             {max ? (
-              <Image
-                src="/icons/window/demaximize.svg"
-                alt="Diminuir janela"
-                width={20}
-                height={20}
-              />
+              <Image src="/icons/window/demaximize.svg" alt="Diminuir janela" width={20} height={20} />
             ) : (
-              <Image
-                src="/icons/window/maximize.svg"
-                alt="Maximizar janela"
-                width={20}
-                height={20}
-              />
+              <Image src="/icons/window/maximize.svg" alt="Maximizar janela" width={20} height={20} />
             )}
           </button>
 
@@ -142,12 +116,7 @@ export function Window({ name, windowIndex, children }: IWindowProps) {
             className={styles.close}
             onClick={() => toggleStateWindow(windowIndex, false)}
           >
-            <Image
-              src="/icons/window/close.svg"
-              alt="Fechar janela"
-              width={20}
-              height={20}
-            />
+            <Image src="/icons/window/close.svg" alt="Fechar janela" width={20} height={20} />
           </button>
         </div>
       </header>

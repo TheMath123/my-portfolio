@@ -39,7 +39,7 @@ export interface IWindowProps {
 
 export interface IWindowContextProps {
   //Component Window
-  containerRef: React.MutableRefObject<HTMLDivElement>;
+  containerRef: React.RefObject<HTMLDivElement> | any;
 }
 
 // <------------------------------------------>
