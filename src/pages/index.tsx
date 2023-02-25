@@ -4,7 +4,7 @@ import { useWindow, useWindowControl } from "../hooks";
 import { AboutMeScreen, ProjectScreen, TalkToMeScreen } from "../screens";
 import { Loading, Taskbar, Icon } from "../components";
 
-import styles from "./home.module.scss";
+import styles from "../styles/home.module.scss";
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
