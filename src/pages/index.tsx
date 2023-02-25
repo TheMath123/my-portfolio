@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { useRouter } from "next/router";
 import { Toaster } from "react-hot-toast";
 import { useWindow, useWindowControl } from "../hooks";
 import { AboutMeScreen, ProjectScreen, TalkToMeScreen } from "../screens";
@@ -9,7 +8,6 @@ import styles from "./home.module.scss";
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
-  const router = useRouter();
   const { stateWindows, toggleStateWindow } = useWindowControl();
   const { containerRef } = useWindow();
 
@@ -19,10 +17,14 @@ export default function Home() {
     if (isMobile) {
       setIsMobile(isMobile);
 
-      router.push("https://m.matheuspa.me/");
+      redirectTo("https://m.matheuspa.me/");
     }
     return;
   }, []);
+
+  const redirectTo = (url: string) => {
+    window.location.href = url;
+  };
 
   return (
     <>
