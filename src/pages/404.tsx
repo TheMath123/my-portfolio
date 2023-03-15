@@ -17,7 +17,7 @@ export default function Custom404() {
       },
       restartPercentage < 50 ? 1000 : 2000,
     );
-    // return clearTimeout(restartingTimer);
+    return clearTimeout(restartingTimer);
   }, [restartPercentage]);
 
   const changePercetageRestarting = () => {
