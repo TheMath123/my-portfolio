@@ -1,0 +1,60 @@
+.container {
+  display: grid;
+  height: 100vh;
+  place-content: center;
+  padding: 1rem 2rem;
+  background: var(--primary);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.titleBox {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  .emojiFace {
+    font-size: 10rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .percentRestart {
+    font-weight: lighter;
+    font-size: 2rem;
+  }
+}
+
+.erroBox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  .qrCode {
+    height: 6rem;
+  }
+
+  .msgError {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: space-between;
+
+    h1 {
+      font-weight: normal;
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-weight: lighter;
+      font-size: 1.3rem;
+    }
+  }
+}
