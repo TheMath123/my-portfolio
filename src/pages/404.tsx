@@ -10,15 +10,20 @@ export default function Custom404() {
   }, []);
 
   useEffect(() => {
-    let restartingTimer = setTimeout(
-      () => {
-        checkAndRedirect(checkDevice);
-        changePercetageRestarting();
-      },
-      restartPercentage < 50 ? 1000 : 2000,
-    );
-    return clearTimeout(restartingTimer);
+    let restartingTimer = setTimeout(() => {
+      checkAndRedirect(checkDevice);
+      changePercetageRestarting();
+    }, calcTime());
+    // return clearTimeout(restartingTimer);
   }, [restartPercentage]);
+
+  const calcTime = () => {
+    if (restartPercentage < 50) {
+      return 1000;
+    } else {
+      return 2000;
+    }
+  };
 
   const changePercetageRestarting = () => {
     if (restartPercentage < 0 || restartPercentage >= 100) return;
@@ -27,12 +32,13 @@ export default function Custom404() {
   };
 
   const checkAndRedirect = (isMobile: boolean) => {
-    if (isMobile && restartPercentage >= 100) {
+    if (restartPercentage < 100) return;
+
+    if (isMobile) {
       redirectTo("https://m.matheuspa.me/");
     } else {
       redirectTo("https://matheuspa.me/");
     }
-    return;
   };
 
   const redirectTo = (url: string) => {
