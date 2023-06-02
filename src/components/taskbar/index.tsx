@@ -14,7 +14,12 @@ export function Taskbar() {
     <div className={styles.taskbar}>
       <div className={styles.icons}>
         <button title="Doors">
-          <Image src="/icons/taskbar/door.svg" alt="Icone de uma porta na cor branca." width={27} height={27} />
+          <Image
+            src="/icons/taskbar/door.svg"
+            alt="Icone de uma porta na cor branca."
+            width={27}
+            height={27}
+          />
         </button>
 
         <Anchor url="https://hitext.vercel.app" title="Aplicação do HiText">
@@ -26,7 +31,10 @@ export function Taskbar() {
           />
         </Anchor>
 
-        <Anchor url="https://startmessage.matheuspa.me" title="Aplicação do StartMessage">
+        <Anchor
+          url="https://startmessage.matheuspa.com"
+          title="Aplicação do StartMessage"
+        >
           <Image
             src="/icons/projects/whatsapp.png"
             alt="Logo da Aplicação do StartMessage, um bolãozinho de conversa verde com telefone na cor branco dentro."
@@ -36,8 +44,17 @@ export function Taskbar() {
         </Anchor>
 
         {orderTask.map((value, index) => (
-          <Anchor key={`icon-${index}`} title={icons[value].title} onClick={() => toggleStateWindow(value, true)}>
-            <Image src={icons[value].image.path} alt={icons[value].image.alt} width={27} height={27} />
+          <Anchor
+            key={`icon-${index}`}
+            title={icons[value].title}
+            onClick={() => toggleStateWindow(value, true)}
+          >
+            <Image
+              src={icons[value].image.path}
+              alt={icons[value].image.alt}
+              width={27}
+              height={27}
+            />
           </Anchor>
         ))}
       </div>

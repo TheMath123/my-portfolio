@@ -55,7 +55,7 @@
       "url": "/icons/projects/whatsapp.png"
     },
     "repository": {
-      "demoURL": "https://startmessage.matheuspa.me",
+      "demoURL": "https://startmessage.matheuspa.com",
       "projectURL": "https://github.com/TheMath123/StartMessage"
     },
     "techs": [
@@ -95,7 +95,7 @@
       "url": "/icons/taskbar/hitext.svg"
     },
     "repository": {
-      "demoURL": "https://hitext.vercel.app/",
+      "demoURL": "https://hitext.vercel.app",
       "projectURL": "https://github.com/Greens-Organization/HiText"
     },
     "techs": [
@@ -139,7 +139,7 @@
       "url": "/icons/projects/profile.png"
     },
     "repository": {
-      "demoURL": "https://cadastro-funcionario.vercel.app/",
+      "demoURL": "https://cadastrofuncionario.matheuspa.com",
       "projectURL": "https://github.com/TheMath123/TelaCadastroFuncionario"
     },
     "techs": [

@@ -35,9 +35,9 @@ export default function Custom404() {
     if (restartPercentage < 100) return;
 
     if (isMobile) {
-      redirectTo("https://m.matheuspa.me/");
+      redirectTo("https://m.matheuspa.com/");
     } else {
-      redirectTo("https://matheuspa.me/");
+      redirectTo("https://matheuspa.com/");
     }
   };
 

@@ -12,12 +12,14 @@ export default function Home() {
   const { containerRef } = useWindow();
 
   useEffect(() => {
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(window.navigator.userAgent);
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(
+      window.navigator.userAgent,
+    );
 
     if (isMobile) {
       setIsMobile(isMobile);
 
-      redirectTo("https://m.matheuspa.me/");
+      redirectTo("https://m.matheuspa.com");
     }
     return;
   }, []);
