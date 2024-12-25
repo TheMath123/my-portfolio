@@ -82,6 +82,7 @@ export function Window({ name, windowIndex, children }: IWindowProps) {
     };
 
     return cleanup;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handlerClickWindow = () => {

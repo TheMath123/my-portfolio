@@ -1,5 +1,7 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import styles from "../styles/404.module.scss";
+import Image from "next/image";
 
 export default function Custom404() {
   const [restartPercentage, setRestartPercentage] = useState(0);
@@ -58,10 +60,12 @@ export default function Custom404() {
           </span>
         </section>
         <section className={styles.erroBox}>
-          <img
-            src="images\qr-code-website.png"
+          <Image
+            src="/images/qr-code-website.png"
             alt="QR Code"
             className={styles.qrCode}
+            width={200}
+            height={200}
           />
           <div className={styles.msgError}>
             <h1>
