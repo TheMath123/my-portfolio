@@ -60,13 +60,16 @@ export default function Custom404() {
           </span>
         </section>
         <section className={styles.erroBox}>
-          <Image
-            src="/images/qr-code-website.png"
-            alt="QR Code"
-            className={styles.qrCode}
-            width={200}
-            height={200}
-          />
+          <div style={{ height: "200px", width: "200px" }}>
+            <Image
+              src="/images/qr-code-website.png"
+              alt="QR Code"
+              className={styles.qrCode}
+              width={200}
+              height={200}
+              style={{ height: "200px", width: "200px" }}
+            />
+          </div>
           <div className={styles.msgError}>
             <h1>
               System will restart and it will take you to a really useful page.

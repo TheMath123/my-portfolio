@@ -48,17 +48,20 @@ export default function Home() {
               name="Sobre o Matheus"
               alt="Personagem de cor de pele (um rosinha claro), de olhos preto, e com sorrisinho."
               img="/icons/desktop/about-me.png"
+              umamiEvent="Open AboutMe"
               commandToOpenWindow={() => toggleStateWindow(0, true)}
             />
             <Icon
               name="Projetos"
               alt="Caderno marron, com um etiqueta branca na capa, e com marcadores de pagina coloridos."
+              umamiEvent="Open Projects"
               img="/icons/desktop/files.svg"
               commandToOpenWindow={() => toggleStateWindow(1, true)}
             />
             <Icon
               name="Fale comigo"
               alt="Um balão de conversar amarelo com rostinho dentro, saindo de um ícone de telefone na cor vermelha."
+              umamiEvent="Open TalkToMe"
               img="/icons/desktop/call.svg"
               commandToOpenWindow={() => toggleStateWindow(2, true)}
             />

@@ -7,9 +7,10 @@ type ButtonProps = {
   onClick?: () => void;
   className?: string;
   children: React.ReactNode;
+  umamiEvent?: string;
 };
 
-export function Anchor({ url, title, onClick, children, className }: ButtonProps) {
+export function Anchor({ url, title, onClick, children, className, umamiEvent }: ButtonProps) {
   function copy() {
     navigator.clipboard.writeText(title);
     toast("Texto copiado!", {
@@ -39,6 +40,7 @@ export function Anchor({ url, title, onClick, children, className }: ButtonProps
       className={className ?? styles.button}
       onClick={handlerOnClick}
       title={title}
+      data-umami-event={umamiEvent}
     >
       {children}
     </button>

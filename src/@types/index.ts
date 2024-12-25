@@ -25,6 +25,7 @@ export interface IIconProps {
   alt: string;
   img: string;
   commandToOpenWindow: () => void;
+  umamiEvent?: string;
 }
 
 // <------------------------------------------>

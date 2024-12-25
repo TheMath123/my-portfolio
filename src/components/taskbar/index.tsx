@@ -13,7 +13,7 @@ export function Taskbar() {
   return (
     <div className={styles.taskbar}>
       <div className={styles.icons}>
-        <button title="Doors">
+        <button title="Doors" data-umami-event="Open the door">
           <Image
             src="/icons/taskbar/door.svg"
             alt="Icone de uma porta na cor branca."
@@ -22,7 +22,7 @@ export function Taskbar() {
           />
         </button>
 
-        <Anchor url="https://hitext.vercel.app" title="Aplicação do HiText" data-umami-event="To HiText">
+        <Anchor url="https://hitext.vercel.app" title="Aplicação do HiText" umamiEvent="To HiText">
           <Image
             src="/icons/taskbar/hitext.svg"
             alt="Logo da Aplicação do HiText, um circulo branco com letra H e T dentro na cor preta."
@@ -34,7 +34,7 @@ export function Taskbar() {
         <Anchor
           url="https://startmessage.matheuspa.com"
           title="Aplicação do StartMessage"
-          data-umami-event="To StartMessage"
+          umamiEvent="To StartMessage"
         >
           <Image
             src="/icons/projects/whatsapp.png"
