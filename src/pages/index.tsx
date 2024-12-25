@@ -18,7 +18,13 @@ export default function Home() {
 
     if (isMobile) {
       setIsMobile(isMobile);
-
+      const name = 'redirect-to-mobile';
+      document.querySelectorAll('a').forEach(a => {
+        if (a.host !== window.location.host && !a.getAttribute('data-umami-event')) {
+          a.setAttribute('data-umami-event', name);
+          a.setAttribute('data-umami-event-url', a.href);
+        }
+      });
       redirectTo("https://m.matheuspa.com");
     }
     return;
