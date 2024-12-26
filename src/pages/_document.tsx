@@ -46,7 +46,6 @@ class MyDocument extends Document {
           <meta name="msapplication-TileColor" content="#ffffff" />
           <script defer src="https://unami-dev.onrender.com/script.js" data-website-id="cb63854d-3d45-4b2c-b27f-2a90f723d518"></script>
           <meta name="theme-color" content="#ffffff" />
-          <title>Matheus Agostinho - Portfolio</title>
         </Head>
         <body>
           <Main />

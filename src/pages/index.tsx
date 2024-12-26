@@ -3,6 +3,7 @@ import { Toaster } from "react-hot-toast";
 import { useWindow, useWindowControl } from "../hooks";
 import { AboutMeScreen, ProjectScreen, TalkToMeScreen } from "../screens";
 import { Loading, Taskbar, Icon } from "../components";
+import { umami } from "../lib/umami";
 
 import styles from "../styles/home.module.scss";
 
@@ -19,20 +20,28 @@ export default function Home() {
     if (isMobile) {
       setIsMobile(isMobile);
       const name = 'redirect-to-mobile';
-      document.querySelectorAll('a').forEach(a => {
-        if (a.host !== window.location.host && !a.getAttribute('data-umami-event')) {
-          a.setAttribute('data-umami-event', name);
-          a.setAttribute('data-umami-event-url', a.href);
-        }
-      });
+      umami.track((props: any) => ({
+        ...props,
+        name,
+        data: {
+          url: "https://m.matheuspa.com"
+        },
+      }));
       redirectTo("https://m.matheuspa.com");
     }
+    const customID = Math.floor(Math.random() * 100000);
+    umami.identify({
+      email: `teste-tracker-${customID}@example.com`,
+      user: `Test User ${customID}`,
+      id: customID,
+    });
     return;
   }, []);
 
   const redirectTo = (url: string) => {
     window.location.href = url;
   };
+
 
   return (
     <>

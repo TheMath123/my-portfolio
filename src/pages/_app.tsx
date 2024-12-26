@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { ToggleWindowProvider, WindowContextProvider } from "../contexts";
 import "../styles/globals.scss";
+import Script from "next/script";
 
 function MyApp({ Component, pageProps }: any) {
   return (
@@ -29,10 +30,10 @@ function MyApp({ Component, pageProps }: any) {
           content="/favicon/browserconfig.xml"
         />
         <meta name="msapplication-TileColor" content="#ffffff" />
-        <script defer src="https://unami-dev.onrender.com/script.js" data-website-id="cb63854d-3d45-4b2c-b27f-2a90f723d518"></script>
         <meta name="theme-color" content="#ffffff" />
         <title>Matheus Agostinho - Portfolio</title>
       </Head>
+      <Script defer src="https://unami-dev.onrender.com/script.js" data-website-id="cb63854d-3d45-4b2c-b27f-2a90f723d518" />
       <WindowContextProvider>
         <ToggleWindowProvider>
           <Component {...pageProps} />
