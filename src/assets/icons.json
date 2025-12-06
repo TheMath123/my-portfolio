@@ -1,7 +1,7 @@
 [
   {
     "id": 0,
-    "title": "Sobre o Matheus",
+    "title": "Sobre mim",
     "image": {
       "path": "/icons/desktop/about-me.png",
       "alt": "Personagem de cor de pele (um rosinha claro), de olhos preto, e com sorrisinho."
@@ -9,7 +9,7 @@
   },
   {
     "id": 1,
-    "title": "Sobre o Matheus",
+    "title": "Projetos",
     "image": {
       "path": "/icons/desktop/files.svg",
       "alt": "Caderno marron, com um etiqueta branca na capa, e com marcadores de pagina coloridos."
@@ -17,7 +17,7 @@
   },
   {
     "id": 2,
-    "title": "Sobre o Matheus",
+    "title": "Contato",
     "image": {
       "path": "/icons/desktop/call.svg",
       "alt": "Um balão de conversar amarelo com rostinho dentro, saindo de um ícone de telefone na cor vermelha."

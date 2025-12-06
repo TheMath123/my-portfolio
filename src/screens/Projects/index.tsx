@@ -18,8 +18,7 @@ export function ProjectScreen() {
               description={item.description}
               image={item.image}
               repository={item.repository}
-              techs={item.techs}
-              concepts={item.concepts}
+
             />
           );
         })}

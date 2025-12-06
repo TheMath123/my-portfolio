@@ -26,12 +26,12 @@ export function Taskbar() {
           />
         </button>
 
-        <Anchor url="https://hitext.vercel.app" title="Aplicação do HiText" umamiEvent="To HiText">
+        <Anchor url="https://generatekeys.grngroup.net" title="Gerador de chaves secretas" umamiEvent="To GenerateKeys">
           <Image
-            src="/icons/taskbar/hitext.svg"
-            alt="Logo da Aplicação do HiText, um circulo branco com letra H e T dentro na cor preta."
-            width={27}
-            height={27}
+            src="/icons/projects/generate-secrets-keys-logo.svg"
+            alt="Logo da Aplicação do Gerador de chaves, um chave com 64 escrito no meio."
+            width={30}
+            height={30}
           />
         </Anchor>
 
@@ -41,10 +41,10 @@ export function Taskbar() {
           umamiEvent="To StartMessage"
         >
           <Image
-            src="/icons/projects/whatsapp.png"
-            alt="Logo da Aplicação do StartMessage, um bolãozinho de conversa verde com telefone na cor branco dentro."
-            width={30}
-            height={30}
+            src="/icons/projects/start-message-logo.svg"
+            alt="Logo da Aplicação do StartMessage, um bolãozinho de conversa verde com play botão branco dentro."
+            width={27}
+            height={27}
           />
         </Anchor>
 

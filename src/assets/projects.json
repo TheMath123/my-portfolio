@@ -1,178 +1,49 @@
 [
   {
-    "title": "Inside Prod.",
-    "description": "Landing page da produtora de vídeos Inside Prod.",
-    "image": {
-      "alt": "INSIDE PROD, logo, uma forma quadrado com N com .",
-      "url": "/icons/projects/insideprod-logo.svg"
-    },
-    "repository": {
-      "demoURL": "https://insideprod.com.br",
-      "projectURL": "https://github.com/TheMath123"
-    },
-    "techs": [
-      {
-        "color": "ts",
-        "title": "Typescript"
-      },
-      {
-        "color": "html",
-        "title": "HTML"
-      },
-      {
-        "color": "react",
-        "title": "React"
-      },
-      {
-        "color": "next",
-        "title": "Next"
-      },
-      {
-        "color": "tailwindcss",
-        "title": "TailwindCSS"
-      }
-    ],
-    "concepts": [
-      {
-        "color": "ux",
-        "title": "UX"
-      },
-      {
-        "color": "mobile",
-        "title": "Mobile First"
-      },
-      {
-        "color": "responsiveness",
-        "title": "Responsividade"
-      }
-    ]
-  },
-  {
     "title": "Start Message",
-    "description": "Gerador um link para iniciar um conversa no WhatsApp a partir de um número de telefone.",
+    "description": "Aplicação web simples para criação de links personalizados do WhatsApp com mensagem automática. Útil para facilitar atendimentos e testar se o número possui WhatsApp.",
     "image": {
-      "alt": "Logo da Aplicação do StartMessage, um bolãozinho de conversa verde com telefone na cor branco dentro.",
+      "alt": "Logo da Aplicação do StartMessage, um bolãozinho de conversa verde com play botão branco dentro.",
       "url": "/icons/projects/start-message-logo.svg"
     },
     "repository": {
       "demoURL": "https://startmessage.matheuspa.com",
       "projectURL": "https://github.com/TheMath123/StartMessage"
-    },
-    "techs": [
-      {
-        "color": "ts",
-        "title": "Typescript"
-      },
-      {
-        "color": "next",
-        "title": "Next"
-      },
-      {
-        "color": "tailwindcss",
-        "title": "TailwindCSS"
-      }
-    ],
-    "concepts": [
-      {
-        "color": "ux",
-        "title": "UX"
-      },
-      {
-        "color": "mobile",
-        "title": "Mobile First"
-      },
-      {
-        "color": "responsiveness",
-        "title": "Responsividade"
-      }
-    ]
+    }
   },
   {
-    "title": "Hi Text",
-    "description": "Conversor de texto para maiúsculas, minúsculas, e outras formas.",
+    "title": "Gerador de chaves secretas",
+    "description": "erador de chave secretas, para APIs.",
     "image": {
-      "alt": "Logo da Aplicação do HiText, um circulo branco com letra H e T dentro na cor preta.",
-      "url": "/icons/taskbar/hitext.svg"
+      "alt": "Logo da Aplicação do Gerador de chaves, um chave com 64 escrito no meio.",
+      "url": "/icons/projects/generate-secrets-keys-logo.svg"
     },
     "repository": {
-      "demoURL": "https://hitext.vercel.app",
-      "projectURL": "https://github.com/Greens-Organization/HiText"
-    },
-    "techs": [
-      {
-        "color": "ts",
-        "title": "Typescript"
-      },
-      {
-        "color": "html",
-        "title": "HTML"
-      },
-      {
-        "color": "react",
-        "title": "React"
-      },
-      {
-        "color": "vite",
-        "title": "Vite"
-      },
-      {
-        "color": "css",
-        "title": "SASS"
-      }
-    ],
-    "concepts": [
-      {
-        "color": "ux",
-        "title": "UX"
-      },
-      {
-        "color": "responsiveness",
-        "title": "Responsividade"
-      }
-    ]
+      "demoURL": "https://generatekeys.grngroup.net",
+      "projectURL": "https://github.com/TheMath123generate-secret-keys"
+    }
   },
   {
-    "title": "Tela de cadastro",
-    "description": "Reconstrução visual da tela de um software, que realiza edição e cadastra novos funcionários.",
+    "title": "Project Zomboid Modpacks",
+    "description": "Ferramenta para criação de pacotes de mods para o jogo Project Zomboid.",
     "image": {
-      "alt": "Folha de papel com pequena foto de personagem, em alguns risco simbolizando algo escrito, e também um certo em verde no canto inferior direito.",
-      "url": "/icons/projects/profile.png"
+      "alt": "Logo é guaxinim laranja segurando uma caixa.",
+      "url": "/icons/projects/pzpacks.png"
     },
     "repository": {
-      "demoURL": "https://cadastrofuncionario.matheuspa.com",
-      "projectURL": "https://github.com/TheMath123/TelaCadastroFuncionario"
+      "demoURL": "https://modpack-creator.vercel.app/",
+      "projectURL": "https://github.com/TheMath123/pz-modpack-creator"
+    }
+  },
+  {
+    "title": "Inside Prod",
+    "description": "Concepção e desenvolvimento landing Page para produtora audiovisual Inside Prod.",
+    "image": {
+      "alt": "INSIDE PROD, logo, uma forma quadrado com N com .",
+      "url": "/icons/projects/insideprod-logo.svg"
     },
-    "techs": [
-      {
-        "color": "html",
-        "title": "HTML"
-      },
-      {
-        "color": "css",
-        "title": "CSS"
-      },
-      {
-        "color": "js",
-        "title": "Javascript"
-      }
-    ],
-    "concepts": [
-      {
-        "color": "ux",
-        "title": "UX"
-      },
-      {
-        "color": "mobile",
-        "title": "Mobile First"
-      },
-      {
-        "color": "responsiveness",
-        "title": "Responsividade"
-      },
-      {
-        "color": "gdesign",
-        "title": "Material Design"
-      }
-    ]
+    "repository": {
+      "demoURL": "https://insideprod.com.br"
+    }
   }
 ]
