@@ -35,6 +35,7 @@ export interface IWindowProps {
   name: string;
   windowIndex: number;
   children?: React.ReactNode;
+  className?: string;
 }
 
 // <------------------------------------------>

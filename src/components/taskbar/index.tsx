@@ -10,7 +10,7 @@ export function Taskbar() {
   const { toggleStateWindow, orderTask } = useWindowControl();
 
   return (
-    <div className="flex flex-row justify-between bg-neutral-900/80 z-999 backdrop-blur-xl ">
+    <div className="flex flex-row justify-between bg-neutral-900/80 z-999 backdrop-blur-xl h-[50px]">
       <div className="flex flex-row items-center justify-center">
         <button
           title="Doors"

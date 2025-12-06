@@ -50,7 +50,7 @@ export default function Home() {
       ) : (
         <div className="grid grid-rows-[1fr_50px] relative h-screen w-screen">
           <Toaster />
-          <main className="p-4" ref={containerRef}>
+          <main ref={containerRef}>
             <Icon
               name="Sobre o Matheus"
               alt="Personagem de cor de pele (um rosinha claro), de olhos preto, e com sorrisinho."

@@ -6,7 +6,7 @@ import { IWindowProps } from "../../@types";
 import { cn } from "@/utils/class-merge";
 import { ArrowsInSimpleIcon, CornersInIcon, CornersOutIcon, FrameCornersIcon, XIcon } from "@phosphor-icons/react";
 
-export function Window({ name, windowIndex, children }: IWindowProps) {
+export function Window({ name, windowIndex, children, className }: IWindowProps) {
   const { containerRef } = useWindow();
   const { toggleStateWindow, windowZIndex, minimizeWindow, focusWindow } = useWindowControl();
   const [max, setMax] = useState(false);
@@ -159,7 +159,7 @@ export function Window({ name, windowIndex, children }: IWindowProps) {
           </button>
         </div>
       </header>
-      <main className="flex grow overflow-auto">{children}</main>
+      <main className={cn('overflow-auto', className)}>{children}</main>
     </div>
   );
 }
