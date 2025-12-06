@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import styles from "./clock.module.scss";
+import { JSX, useEffect, useState } from "react";
 // eslint-disable
 export function Clock(): JSX.Element {
   const [currentDate, setCurrentDate] = useState<Date>(new Date());
@@ -20,7 +19,7 @@ export function Clock(): JSX.Element {
   });
 
   return (
-    <div className={styles.container}>
+    <div className="flex flex-col items-center justify-center text-[0.9rem] font-normal text-white">
       <time>
         {currentTime.toLocaleString("pt-br", {
           hour: "numeric",

@@ -1,5 +1,4 @@
 import { useEffect, useRef } from "react";
-import styles from "./badge.module.scss";
 
 type BadgeProps = {
   title: string;
@@ -19,17 +18,17 @@ export function Badge(props: BadgeProps) {
     if (props.color.charAt(0) === "#") {
       mainCompRef.current.style.background = props.color;
     } else {
-      mainCompRef.current.style.background = `var(--${props.color})`;
+      mainCompRef.current.style.background = `var(--color-${props.color})`;
     }
   }
 
   return (
     <main
       ref={mainCompRef}
-      className={styles.badgeBox}
-      onClick={props.url ? () => window.open(props.url) : ()=>{}}
+      className="flex justify-center items-center flex-wrap text-center py-[5.6px] px-[11px] rounded-2xl [&::-webkit-scrollbar]:hidden"
+      onClick={props.url ? () => window.open(props.url) : () => { }}
     >
-      <span className={styles.title}>{props.title}</span>
+      <span className="font-medium text-[0.8rem] text-white">{props.title}</span>
     </main>
   );
 }

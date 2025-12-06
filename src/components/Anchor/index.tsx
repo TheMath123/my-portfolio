@@ -1,5 +1,4 @@
 import toast from 'react-hot-toast';
-import styles from './anchor.module.scss';
 
 type ButtonProps = {
   url?: string;
@@ -37,7 +36,7 @@ export function Anchor({ url, title, onClick, children, className, umamiEvent }:
 
   return (
     <button
-      className={className ?? styles.button}
+      className={className ?? "flex items-center  justify-center cursor-pointer transition-all duration-300 hover:brightness-110 w-[50px] h-full border-0 hover:bg-[hsla(0,0%,47%,0.219)]"}
       onClick={handlerOnClick}
       title={title}
       data-umami-event={umamiEvent}

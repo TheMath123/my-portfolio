@@ -4,21 +4,25 @@ import { Anchor, Clock } from "..";
 import { useWindowControl } from "../../hooks";
 
 import iconsAssets from "../../assets/icons.json";
-import styles from "./taskbar.module.scss";
 
 export function Taskbar() {
   const [icons] = useState(iconsAssets);
   const { toggleStateWindow, orderTask } = useWindowControl();
 
   return (
-    <div className={styles.taskbar}>
-      <div className={styles.icons}>
-        <button title="Doors" data-umami-event="Open the door">
+    <div className="flex flex-row justify-between bg-neutral-900/80 z-999 backdrop-blur-xl ">
+      <div className="flex flex-row items-center justify-center">
+        <button
+          title="Doors"
+          data-umami-event="Open the door"
+          className="flex items-center justify-center bg-none text-[0] border-none px-[0.7rem] w-[50px] h-full cursor-pointer hover:bg-[hsla(0,0%,47%,0.219)]"
+        >
           <Image
             src="/icons/taskbar/door.svg"
             alt="Icone de uma porta na cor branca."
             width={27}
             height={27}
+            className="w-7 h-7"
           />
         </button>
 
@@ -59,12 +63,16 @@ export function Taskbar() {
           </Anchor>
         ))}
       </div>
-      <div className={styles.info}>
-        <select name="Language" id="1">
+      <div className="flex flex-row">
+        <select
+          name="Language"
+          id="1"
+          className="text-[0.85rem] font-medium text-white bg-none border-transparent transition-all duration-200 [&>option]:bg-color1 [&>option]:py-2 [&>option]:px-[0.7rem]"
+        >
           <option defaultValue="pt-br">PT-BR</option>
           <option value="en-us">EN-US</option>
         </select>
-        <div className={styles.clock}>
+        <div className="flex flex-col items-center justify-center px-6">
           <Clock />
         </div>
       </div>

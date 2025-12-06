@@ -1,22 +1,18 @@
 import Image from "next/image";
 import { IComponentProjectProps } from "../../@types";
-import { Anchor, Badge } from "..";
-import styles from "./project.module.scss";
+import { Anchor } from "..";
 
-export function ProjectItem({ image, description, title, techs, concepts, repository }: IComponentProjectProps) {
+export function ProjectItem({ image, description, title, repository }: IComponentProjectProps) {
   return (
-    <div className={styles.container}>
-      <div className={styles.contentImage}>
+    <div className="flex flex-row justify-between max-[850px]:flex-col">
+      <main className="flex flex-row gap-7 [&::-webkit-scrollbar]:hidden">
         <Image src={image.url} alt={image.alt} width={47} height={47} />
-      </div>
-
-      <main className={styles.contentDescription}>
-        <div className={styles.description}>
-          <h1>{title}</h1>
-          <p>{description}</p>
+        <div className="flex flex-col gap-[0.2rem]">
+          <h1 className="font-semibold text-2xl">{title}</h1>
+          <p className="font-light text-[1.2rem]">{description}</p>
         </div>
 
-        <footer className={styles.badgesBox}>
+        {/* <footer className={styles.badgesBox}>
           <div className={styles.technologies}>
             <h2>Tecnologias Usadas</h2>
             <ul>
@@ -33,10 +29,10 @@ export function ProjectItem({ image, description, title, techs, concepts, reposi
               })}
             </ul>
           </div>
-        </footer>
+        </footer> */}
       </main>
 
-      <nav className={styles.contentLinks}>
+      <nav className="flex flex-col justify-self-end items-end gap-2 max-[850px]:items-start">
         <Anchor title="Demo" url={repository.demoURL}>
           <Image
             layout="fixed"
@@ -45,7 +41,7 @@ export function ProjectItem({ image, description, title, techs, concepts, reposi
             width={29}
             height={29}
           />
-          <span>Demo</span>
+          <span className="font-light text-base text-white">Ao vivo</span>
         </Anchor>
 
         <Anchor title="Repositório" url={repository.projectURL}>
@@ -56,7 +52,7 @@ export function ProjectItem({ image, description, title, techs, concepts, reposi
             width={29}
             height={29}
           />
-          <span>Repositório</span>
+          <span className="font-light text-base text-white">Repositório</span>
         </Anchor>
       </nav>
     </div>

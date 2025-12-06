@@ -4,7 +4,7 @@
     "description": "Landing page da produtora de vídeos Inside Prod.",
     "image": {
       "alt": "INSIDE PROD, logo, uma forma quadrado com N com .",
-      "url": "/icons/projects/logo-inside.svg"
+      "url": "/icons/projects/insideprod-logo.svg"
     },
     "repository": {
       "demoURL": "https://insideprod.com.br",
@@ -24,12 +24,12 @@
         "title": "React"
       },
       {
-        "color": "vite",
-        "title": "Vite"
+        "color": "next",
+        "title": "Next"
       },
       {
-        "color": "css",
-        "title": "SASS"
+        "color": "tailwindcss",
+        "title": "TailwindCSS"
       }
     ],
     "concepts": [
@@ -52,7 +52,7 @@
     "description": "Gerador um link para iniciar um conversa no WhatsApp a partir de um número de telefone.",
     "image": {
       "alt": "Logo da Aplicação do StartMessage, um bolãozinho de conversa verde com telefone na cor branco dentro.",
-      "url": "/icons/projects/whatsapp.png"
+      "url": "/icons/projects/start-message-logo.svg"
     },
     "repository": {
       "demoURL": "https://startmessage.matheuspa.com",
@@ -60,16 +60,16 @@
     },
     "techs": [
       {
-        "color": "js",
-        "title": "Javascript"
+        "color": "ts",
+        "title": "Typescript"
       },
       {
-        "color": "html",
-        "title": "HTML"
+        "color": "next",
+        "title": "Next"
       },
       {
-        "color": "css",
-        "title": "CSS"
+        "color": "tailwindcss",
+        "title": "TailwindCSS"
       }
     ],
     "concepts": [

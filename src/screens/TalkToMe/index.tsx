@@ -1,10 +1,9 @@
 import { Contact, Window } from "../../components";
-import styles from "./TalkToMe.module.scss";
 
 export function TalkToMeScreen() {
   return (
     <Window name="Fale comigo" windowIndex={2}>
-      <div className={styles.container}>
+      <div className="flex flex-col py-8 px-16 gap-16 max-[850px]:py-4 max-[850px]:px-8">
         <Contact
           title="E-mail"
           description="math.p.agostinho@outlook.com"

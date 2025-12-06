@@ -3,7 +3,8 @@ import Image from "next/image";
 import { useWindow, useWindowControl } from "../../hooks";
 
 import { IWindowProps } from "../../@types";
-import styles from "./window.module.scss";
+import { cn } from "@/utils/class-merge";
+import { ArrowsInSimpleIcon, CornersInIcon, CornersOutIcon, FrameCornersIcon, XIcon } from "@phosphor-icons/react";
 
 export function Window({ name, windowIndex, children }: IWindowProps) {
   const { containerRef } = useWindow();
@@ -42,6 +43,7 @@ export function Window({ name, windowIndex, children }: IWindowProps) {
 
     const onMouseDown = (e: MouseEvent) => {
       e.preventDefault();
+      if (max) return;
       if (!header?.contains(e.target as Node) || buttons?.contains(e.target as Node)) return;
 
       isClicked.current = true;
@@ -51,7 +53,7 @@ export function Window({ name, windowIndex, children }: IWindowProps) {
 
     const onMouseUp = (e: MouseEvent) => {
       e.preventDefault();
-
+      if (max) return;
       isClicked.current = false;
       coords.current.lastX = box.offsetLeft;
       coords.current.lastY = box.offsetTop;
@@ -60,7 +62,7 @@ export function Window({ name, windowIndex, children }: IWindowProps) {
     const onMouseMove = (e: MouseEvent) => {
       e.preventDefault();
 
-      if (!isClicked.current) return;
+      if (!isClicked.current || max) return;
 
       const nextX = e.clientX - coords.current.startX + coords.current.lastX;
       const nextY = e.clientY - coords.current.startY + coords.current.lastY;
@@ -83,10 +85,26 @@ export function Window({ name, windowIndex, children }: IWindowProps) {
 
     return cleanup;
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [max]);
 
   const handlerClickWindow = () => {
     focusWindow(windowIndex);
+  };
+
+  const handleMaximize = () => {
+    if (!max && windowRef.current) {
+      // Salvar posição atual antes de maximizar
+      coords.current.lastX = windowRef.current.offsetLeft;
+      coords.current.lastY = windowRef.current.offsetTop;
+      // Resetar estilos inline
+      windowRef.current.style.top = '';
+      windowRef.current.style.left = '';
+    } else if (windowRef.current) {
+      // Restaurar posição ao desmaximizar
+      windowRef.current.style.top = `${coords.current.lastY}px`;
+      windowRef.current.style.left = `${coords.current.lastX}px`;
+    }
+    setMax(!max);
   };
 
   return (
@@ -94,39 +112,54 @@ export function Window({ name, windowIndex, children }: IWindowProps) {
       ref={windowRef}
       data-message={name}
       title={name}
-      className={`${styles.container} ${max && styles.max}`}
-      style={{ zIndex: windowZIndex[windowIndex] }}
+      className={cn('grid grid-rows-[32px_1fr] absolute z-100 w-4/5 h-3/5 bg-neutral-800/80 backdrop-blur-2xl rounded-2xl shadow-md',
+        max
+          ? 'top-0 left-0 w-screen h-[calc(100vh-50px)] rounded-none'
+          : 'top-[10%] left-[10%]'
+      )}
+      style={{
+        zIndex: windowZIndex[windowIndex],
+      }}
       onClick={() => handlerClickWindow()}
     >
-      <header ref={headerRef}>
-        <span className={styles.title}>{name}</span>
-        <div ref={buttonsRef} className={styles.btnsWindow}>
-          <button disabled={isClicked.current} className={styles.minimize} onClick={() => minimizeWindow(windowIndex)}>
-            <Image src="/icons/window/minimize.svg" alt="Minimizar janela" width={20} height={20} />
+      <header
+        ref={headerRef}
+        className={cn('flex items-center justify-center relative bg-neutral-900',
+          max ? 'rounded-none' : 'rounded-t-2xl'
+        )}
+      >
+        <span className="text-white font-medium text-center">{name}</span>
+        <div ref={buttonsRef} className="flex flex-row gap-2 absolute right-2">
+          <button
+            disabled={isClicked.current}
+            onClick={() => minimizeWindow(windowIndex)}
+            className="hover:bg-neutral-100/10 cursor-pointer rounded-md transition-all duration-200 p-[5px] text-[0] bg-none border-none"
+          >
+            <ArrowsInSimpleIcon className="w-5 h-5" />
           </button>
 
           <button
             disabled={isClicked.current}
-            className={styles.maximize}
-            onClick={() => (max ? setMax(false) : setMax(true))}
+            onClick={handleMaximize}
+            className="hover:bg-neutral-100/10 cursor-pointer rounded-md transition-all duration-200 p-[5px] text-[0] bg-none border-none"
           >
             {max ? (
-              <Image src="/icons/window/demaximize.svg" alt="Diminuir janela" width={20} height={20} />
+              <CornersInIcon className="w-5 h-5" />
             ) : (
-              <Image src="/icons/window/maximize.svg" alt="Maximizar janela" width={20} height={20} />
+              <CornersOutIcon className="w-5 h-5" />
             )}
           </button>
 
           <button
             disabled={isClicked.current}
-            className={styles.close}
             onClick={() => toggleStateWindow(windowIndex, false)}
+            className="hover:bg-red-500/20 cursor-pointer rounded-md transition-all duration-200 p-[5px] text-[0] bg-none border-none"
           >
-            <Image src="/icons/window/close.svg" alt="Fechar janela" width={20} height={20} />
+            <XIcon className="w-5 h-5" />
           </button>
         </div>
       </header>
-      <main>{children}</main>
+      <main className="flex grow overflow-auto">{children}</main>
     </div>
   );
 }

@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { Anchor } from "..";
-import styles from "./contact.module.scss";
 
 type ContactProps = {
   title: string;
@@ -12,8 +11,8 @@ type ContactProps = {
 
 export function Contact(props: ContactProps) {
   return (
-    <div className={styles.main}>
-      <div className={styles.images}>
+    <div className="flex flex-row gap-4">
+      <div className="flex justify-center items-center">
         <Image
           src={props.imageUrl}
           alt={props.imageAlt}
@@ -21,10 +20,10 @@ export function Contact(props: ContactProps) {
           width={54}
         />
       </div>
-      <div className={styles.infos}>
-        <h1>{props.title}</h1>
+      <div className="flex flex-col gap-2">
+        <h1 className="font-medium text-xl">{props.title}</h1>
         <Anchor
-          className={styles.link}
+          className="cursor-pointer transition-all duration-300 hover:underline active:scale-90"
           url={props.url}
           title={props.description}
         >

@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+:root {
+  /* Colors */
+  --color-color1: #262626;
+  --color-color2: #35363a;
+  --color-color2-transparent: #35363a00;
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(154.87deg, #0066e3 -21.63%, #0050b4 112.27%);
+  --gradient-default: linear-gradient(180deg, #e8e8e8 0%, #cfcfcf 100%);
+  --gradient-window: linear-gradient(168.51deg, #353635 8%, #313236 92.26%);
+  
+  /* Badge Colors */
+  --color-js: #f7ba1e;
+  --color-html: #e54d26;
+  --color-css: #379ad5;
+  --color-ts: #1e8ff7;
+  --color-react: #f7861e;
+  --color-vite: #add900;
+  --color-sass: #ff78b1;
+  --color-ux: #bf1ef7;
+  --color-mobile: #e52626;
+  --color-responsiveness: #3776d5;
+  --color-gdesign: #c8d537;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  font-size: 1rem;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  background: #4b4b4b;
+  overflow: hidden;
+}
+
+a {
+  color: white;
+  font-size: 1rem;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  transition: filter 0.3s;
+}
+
+a:hover {
+  filter: brightness(0.7);
+}
+
+::-webkit-scrollbar {
+  background: none;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-color1);
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-button {
+  background: none;
+}
+
+::-webkit-scrollbar-corner {
+  background: none;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
