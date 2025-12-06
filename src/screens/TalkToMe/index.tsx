@@ -6,8 +6,8 @@ export function TalkToMeScreen() {
       <div className="flex flex-col py-8 px-16 gap-16 max-[850px]:py-4 max-[850px]:px-8">
         <Contact
           title="E-mail"
-          description="math.p.agostinho@outlook.com"
-          url="mailto:math.p.agostinho@outlook.com"
+          description="contact@matheuspa.com"
+          url="mailto:contact@matheuspa.com"
           imageUrl="/icons/contacts/mail.png"
           imageAlt="Envelope na cor azul"
         />
@@ -28,13 +28,6 @@ export function TalkToMeScreen() {
           imageUrl="/icons/contacts/github.png"
           imageAlt="Circulo na cor azul arroxeado
           com gato polvo simbolo do github dentro na cor do fundo"
-        />
-
-        <Contact
-          title="Discord"
-          description="TheMath123#2823"
-          imageUrl="/icons/contacts/discord.svg"
-          imageAlt="Logotipo do discord o controle na cor azul"
         />
       </div>
     </Window>
